@@ -1,8 +1,5 @@
 # 🎅✨ Hack the Holidays! 🎄🎁  
 
-**THIS TEMPLATE IS ONLY TO BE USED FOR THE DECEMBER HACKATHON PROJECT**  
-Please do not use it for course project work.  
-
 ---
 
 ## **🎄 Hack the Holidays: Submission Details**  
