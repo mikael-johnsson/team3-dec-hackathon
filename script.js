@@ -2,7 +2,6 @@ import doors from './doors.js';
 
 // All functions goes here
 
-
 function allowedDoors(doors){
     let allowedDoors = []
     let todaysDoor = {}
@@ -18,8 +17,18 @@ function allowedDoors(doors){
             console.log('Error in allowedDays function');
         }
     });
-    console.log('Allowed days: ', allowedDoors);
-    console.log('Today\'s day: ', todaysDoor);
+    // console.log('Allowed days: ', allowedDoors);
+    // console.log('Today\'s day: ', todaysDoor);
+    return allowedDoors;
 }
 
-allowedDoors(doors);
+let doorsToOpen = allowedDoors(doors);
+
+function addContentToDoors(doors){
+    doors.forEach(door => {
+        document.getElementById(door.id).innerHTML = door.content;
+    });
+    
+}
+
+addContentToDoors(doorsToOpen);
