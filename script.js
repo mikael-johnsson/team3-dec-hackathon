@@ -68,4 +68,30 @@ function clickableDoors(doors){
     });
 }
 
+/**
+ * 
+ * @param {array} doors - an array of all doors that are allowed to be opened
+ * Highlights the door that corresponds to todays date
+ */
+function highlightToday(doors){
+    const today = getTodayDate();
+    let todaysDoor = {};
+    doors.forEach(door => {
+        let doorDate = door.date.toDateString();
+        if(doorDate == today){
+            todaysDoor = door;
+        }
+    });
+    let targetDoor = document.getElementById(todaysDoor.id);
+    targetDoor.classList.add('todays-door');
+}
+
+function getTodayDate() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set time to 00:00:00
+    return today.toDateString();
+}
+
+
+highlightToday(doorsToOpen);
 addContentToDoors(doorsToOpen);
