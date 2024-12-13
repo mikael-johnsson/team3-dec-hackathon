@@ -4,6 +4,9 @@
 ## **🎄 Hack the Holidays: Submission Details**  
 
 ### **Deployment**  
+
+<!-- Add deployment steps here -->
+
 The project is deployed and can be accessed at:  
 **https://mikael-johnsson.github.io/team3-dec-hackathon/**  
 
@@ -12,7 +15,9 @@ The project is deployed and can be accessed at:
 ### **Criteria**  
 In this section, we will briefly discuss how our team addressed the applicable criteria:  
 - 🎁 **The project fits the theme of celebrating the holidays.**  
+    - This project is based on the popular advent calendars which appear around Christmas time, usually filled with chocolate! (Unfortunately there is no chocolate in this one)
 - 🎁 **The project is well planned and executed (Using GitHub Projects/Kanban).**  
+    - Issues were created for tasks that needed to be done and assigned to contributors. The project board can be found [here](https://github.com/users/mikael-johnsson/projects/9/views/1)
 - 🎁 **The project has a basic README that follows the provided template.**  
 - 🎁 **The project has an overall sense of completeness.**  
 - 🎁 **The project showcases a strong sense of creativity and originality.**  
