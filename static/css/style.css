@@ -28,6 +28,14 @@
     background-color: rgb(39, 61, 33);
 }
 
+/* Basic css class to allow for card flip for each door */
+.card-flip {
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 0.5s ease-out;
+    transform: rotateY(180deg);
+}
+
 /* Footer styles */
 footer {
     color: white;

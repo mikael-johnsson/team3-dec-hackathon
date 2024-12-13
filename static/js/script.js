@@ -8,10 +8,10 @@ import doors from './doors.js';
  * @returns {array} allowedDoors - an array of all doors
  * that are allowed to be opened according to todays date
  */
-function allowedDoors(doors){
+function allowedDoors(doors) {
     let allowedDoors = []
     let today = new Date();
-    today.setHours(0,0,0,0);
+    today.setHours(0, 0, 0, 0);
 
     doors.forEach(door => {
         if (door.date <= today){
@@ -95,3 +95,24 @@ function getTodayDate() {
 
 highlightToday(doorsToOpen);
 addContentToDoors(doorsToOpen);
+
+/**
+ * Starter function to allow the doors to flip when a user clicks on them.
+ * doorsToFlip can be updated to allowedDoors. This is where we could
+ * check the date and display a message to the user if they try to
+ * open a door when it's not yet that date.
+ * May have to create two separate css classes so that the front of the door
+ * displays the number, then when the door is clicked to flip, the back displays
+ * the door content listed in doors.js.
+ */
+function flipDoor(doors) {
+    doors.forEach((door) => {
+        door.addEventListener("click", function () {
+            this.classList.add('card-flip')
+        })
+    });
+};
+;
+
+let doorsToFlip = document.querySelectorAll('.card');
+flipDoor(doorsToFlip);
