@@ -10,17 +10,14 @@ import doors from './doors.js';
  */
 function allowedDoors(doors){
     let allowedDoors = []
-    let todaysDoor = {}
     let today = new Date();
     today.setHours(0,0,0,0);
 
     doors.forEach(door => {
-        if (door.date < today){
+        if (door.date <= today){
             allowedDoors.push(door);
-        } else if (door.date.toDateString() === today.toDateString()){
-            todaysDoor = door;
         } else {
-            console.log('Error in allowedDays function');
+            console.log('This door is locked: ', door.date);
         }
     });
     // Returns an array of door objects that are allowed to be opened
@@ -38,9 +35,63 @@ let doorsToOpen = allowedDoors(doors);
  * For each allowed door, this function adds the content to the door
  */
 function addContentToDoors(doors){
+    clickableDoors(doors)
     doors.forEach(door => {
-        document.getElementById(door.id).innerHTML = door.content;
+        let targetDoor = document.getElementById(door.id)
+        targetDoor.querySelector('p').innerHTML = door.content.text
+
+        if(door.content.img !== ""){
+            let doorImg = targetDoor.querySelector('img');
+            doorImg.src = door.content.img;
+        }
     });
 }
 
+/**
+ * 
+ * @param {array} doors - an array of all doors that are allowed to be opened
+ * creates an event listener for each door, so that when the door is clicked,
+ * it toggles between the door being open (content displaying) 
+ * and closed (default door displaying)
+ */
+function clickableDoors(doors){
+    // console.log("clickable doors: ", doors);
+    doors.forEach(door => {
+        let targetDoor = document.getElementById(door.id);
+        const children = targetDoor.querySelectorAll('.child');
+        targetDoor.addEventListener('click', (e) => {
+            children.forEach(child => {
+                child.classList.toggle('hidden');
+            });
+            
+        });
+    });
+}
+
+/**
+ * 
+ * @param {array} doors - an array of all doors that are allowed to be opened
+ * Highlights the door that corresponds to todays date
+ */
+function highlightToday(doors){
+    const today = getTodayDate();
+    let todaysDoor = {};
+    doors.forEach(door => {
+        let doorDate = door.date.toDateString();
+        if(doorDate == today){
+            todaysDoor = door;
+        }
+    });
+    let targetDoor = document.getElementById(todaysDoor.id);
+    targetDoor.classList.add('todays-door');
+}
+
+function getTodayDate() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set time to 00:00:00
+    return today.toDateString();
+}
+
+
+highlightToday(doorsToOpen);
 addContentToDoors(doorsToOpen);

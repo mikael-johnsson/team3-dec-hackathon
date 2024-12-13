@@ -2,22 +2,34 @@ const doors = [
     {
         id: "door1",
         date: new Date('2024-12-01T00:00:00'),
-        content: 'This is a fun fact about December 1st.',
+        content: {
+            text:"this is a fun fact about December 1st.",
+            img: "images/santa_door1.jpg",
+        }
     },
     {
         id: "door2",
         date: new Date('2024-12-02T00:00:00'),
-        content: 'This is a fun fact about December 2nd.',
+        content: {
+            text:"this is a fun fact about December 2nd.",
+            img: "",
+        }
     },
     {
-        id: "door12",
-        date: new Date('2024-12-12T00:00:00'),
-        content: 'This is a riddle about December 12th.',
+        id: "door13",
+        date: new Date('2024-12-13T00:00:00'),
+        content: {
+            text:"this is a fun fact about December 13th.",
+            img: "",
+        }
     },
     {
         id: "door18",
         date: new Date('2024-12-18T00:00:00'),
-        content: 'This is a riddle about December 18th.',
+        content: {
+            text:"this is a fun fact about December 18th.",
+            img: "",
+        }
     }
 ]
 

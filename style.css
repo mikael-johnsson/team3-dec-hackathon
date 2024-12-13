@@ -4,5 +4,37 @@
 /* Header styles */
 
 /* Calendar styles */
+.door-container {
+    width: 300px;
+    margin: 15px;
+}
+
+.child {
+    color: aliceblue;
+    background-color: #b62121;
+    border: solid 2px rgb(13, 105, 13);
+}
+
+.hidden {
+    display: none;
+}
+
+.door-img {
+    width: 200px;
+    height: 200px;
+}
+
+.todays-door .child {
+    background-color: rgb(39, 61, 33);
+}
 
 /* Footer styles */
+footer {
+    color: white;
+    background-color: #b62121;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
