@@ -43,13 +43,8 @@ The **Goal** section provides a concise summary of the main objective or purpose
 ---
 
 ## **💻 Tech Stack**  
-In the **Tech** section, we provide information about the technology stack, dependencies, and any technical details related to the project.  
-For example:  
-- Frontend: HTML, CSS, JavaScript  
-- Backend: Python, Flask  
-- Database: PostgreSQL  
-- Version Control: Git & GitHub  
-- Deployment: [Insert Deployment Platform, e.g., Heroku, Netlify, etc.]  
+
+[Project name here] is a front-end project created using **HTML**, **CSS** and **JavaScript**. The front-end framework **Bootstrap** was also used to create the 'doors' on the advent calendar. Version control was done using **Git** and *GitHub*. The final project was deployed also on **GitHub**. 
 
 ---
 
