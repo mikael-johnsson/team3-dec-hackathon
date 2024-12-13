@@ -16,8 +16,6 @@ function allowedDoors(doors) {
     doors.forEach(door => {
         if (door.date <= today){
             allowedDoors.push(door);
-        } else {
-            console.log('This door is locked: ', door.date);
         }
     });
     // Returns an array of door objects that are allowed to be opened
@@ -38,10 +36,10 @@ function addContentToDoors(doors){
     clickableDoors(doors)
     doors.forEach(door => {
         let targetDoor = document.getElementById(door.id)
-        targetDoor.querySelector('p').innerHTML = door.content.text
+        targetDoor.querySelector('.card-body').innerHTML = door.content.text;
 
         if(door.content.img !== ""){
-            let doorImg = targetDoor.querySelector('img');
+            let doorImg = targetDoor.querySelector('.card-img-top');
             doorImg.src = door.content.img;
         }
     });
@@ -55,7 +53,6 @@ function addContentToDoors(doors){
  * and closed (default door displaying)
  */
 function clickableDoors(doors){
-    // console.log("clickable doors: ", doors);
     doors.forEach(door => {
         let targetDoor = document.getElementById(door.id);
         const children = targetDoor.querySelectorAll('.child');
@@ -83,7 +80,8 @@ function highlightToday(doors){
         }
     });
     let targetDoor = document.getElementById(todaysDoor.id);
-    targetDoor.classList.add('todays-door');
+    let doorHeader = targetDoor.querySelector('.card-header');
+    doorHeader.classList.add('todays-door');
 }
 
 function getTodayDate() {
