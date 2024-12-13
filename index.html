@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,6 +22,10 @@
       crossorigin="anonymous"
     ></script>
     <title>Hackathon Calendar</title>
+</head>
+<body>
+    <!-- Header starts here -->
+    <!-- Header stops here -->
   </head>
   <body>
     <!-- Bootstrap Container -->
@@ -26,6 +34,12 @@
       <!-- Header stops here -->
 
     <!-- Calendar (with placeholder divs) starts here -->
+    <!-- Timer Section -->
+    <div id="timer">
+        <div id="currentTime"></div>
+        <div id="timeToNextDoor"></div>
+        <div id="timeToChrismas"></div>
+    </div>
     <div class="door-container" id="door1">
         <div class="child">1st of dec</div>
         <div class="child hidden">
@@ -266,10 +280,16 @@
                 <li><a href="#"></a>placeholder name</li>
             </ul>
         </div>
+    </footer>
+
      </footer>
     <!-- Footer stops here -->
 
     <!-- JS script -->
+    <script type="module" src="static/js/script.js"></script>
+    <script type="module" src="static/js/timer.js"></script>
+    <script type="module" src="static/js/doors.js"></script>
+</body>
     <script type="module" src="script.js"></script>
   </body>
 </html>
