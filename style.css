@@ -4,6 +4,21 @@
 /* Header styles */
 
 /* Calendar styles */
+.door-container {
+    width: 300px;
+    margin: 15px;
+}
+
+.child {
+    color: aliceblue;
+    background-color: #b62121;
+    border: solid 2px rgb(13, 105, 13);
+}
+
+.hidden {
+    display: none;
+}
+
 .door-img {
     width: 200px;
     height: 200px;
