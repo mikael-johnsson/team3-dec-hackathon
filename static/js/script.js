@@ -1,4 +1,4 @@
-import doors from './doors.js';
+import doors from './staic/js/doors.js';
 
 // All functions goes here
 
