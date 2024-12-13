@@ -4,9 +4,8 @@
 ## **🎄 Hack the Holidays: Submission Details**  
 
 ### **Deployment**  
-(Please note: Your team must also include the deployed links in the usual submission in Hackapp.)  
 The project is deployed and can be accessed at:  
-**http://your-deployed-link.com**  
+**https://mikael-johnsson.github.io/team3-dec-hackathon/**  
 
 ---
 
