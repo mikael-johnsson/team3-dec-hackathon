@@ -1,12 +1,12 @@
 import doors from './doors.js';
 
-// All functions go here
+// All functions goes here
 
 /**
  * 
  * @param {array} doors  - an array of all 24 doors
  * @returns {array} allowedDoors - an array of all doors
- * that are allowed to be opened according to today's date
+ * that are allowed to be opened according to todays date
  */
 function allowedDoors(doors){
     let allowedDoors = []
@@ -24,7 +24,9 @@ function allowedDoors(doors){
     return allowedDoors;
 }
 
+
 let doorsToOpen = allowedDoors(doors);
+
 
 /**
  * 
@@ -48,15 +50,48 @@ function addContentToDoors(doors){
 /**
  * 
  * @param {array} doors - an array of all doors that are allowed to be opened
- * This function adds click event listeners to the doors
+ * creates an event listener for each door, so that when the door is clicked,
+ * it toggles between the door being open (content displaying) 
+ * and closed (default door displaying)
  */
-function clickableDoors(doors) {
+function clickableDoors(doors){
+    // console.log("clickable doors: ", doors);
     doors.forEach(door => {
         let targetDoor = document.getElementById(door.id);
-        targetDoor.addEventListener('click', () => {
-            targetDoor.querySelector('.child.hidden').classList.remove('hidden');
+        const children = targetDoor.querySelectorAll('.child');
+        targetDoor.addEventListener('click', (e) => {
+            children.forEach(child => {
+                child.classList.toggle('hidden');
+            });
+            
         });
     });
 }
 
+/**
+ * 
+ * @param {array} doors - an array of all doors that are allowed to be opened
+ * Highlights the door that corresponds to todays date
+ */
+function highlightToday(doors){
+    const today = getTodayDate();
+    let todaysDoor = {};
+    doors.forEach(door => {
+        let doorDate = door.date.toDateString();
+        if(doorDate == today){
+            todaysDoor = door;
+        }
+    });
+    let targetDoor = document.getElementById(todaysDoor.id);
+    targetDoor.classList.add('todays-door');
+}
+
+function getTodayDate() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set time to 00:00:00
+    return today.toDateString();
+}
+
+
+highlightToday(doorsToOpen);
 addContentToDoors(doorsToOpen);
