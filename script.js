@@ -9,16 +9,15 @@ import doors from './doors.js';
  * that are allowed to be opened according to todays date
  */
 function allowedDoors(doors){
+    console.log("all doors: ", doors);
     let allowedDoors = []
     let todaysDoor = {}
     let today = new Date();
     today.setHours(0,0,0,0);
 
     doors.forEach(door => {
-        if (door.date < today){
+        if (door.date <= today){
             allowedDoors.push(door);
-        } else if (door.date.toDateString() === today.toDateString()){
-            todaysDoor = door;
         } else {
             console.log('Error in allowedDays function');
         }
@@ -29,6 +28,7 @@ function allowedDoors(doors){
 
 
 let doorsToOpen = allowedDoors(doors);
+console.log(doorsToOpen);
 
 
 /**
@@ -39,7 +39,13 @@ let doorsToOpen = allowedDoors(doors);
  */
 function addContentToDoors(doors){
     doors.forEach(door => {
-        document.getElementById(door.id).innerHTML = door.content;
+        let targetDoor = document.getElementById(door.id)
+        targetDoor.querySelector('p').innerHTML = door.content.text
+
+        if(door.content.img !== ""){
+            let doorImg = targetDoor.querySelector('img');
+            doorImg.src = door.content.img;
+        }
     });
 }
 
