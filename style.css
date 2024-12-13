@@ -25,3 +25,12 @@
 }
 
 /* Footer styles */
+footer {
+    color: white;
+    background-color: #b62121;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
