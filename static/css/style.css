@@ -4,28 +4,24 @@
 /* Header styles */
 
 /* Calendar styles */
-.door-container {
-    width: 300px;
-    margin: 15px;
+
+.container {
+    margin-bottom: 20px;
 }
 
 .child {
     color: aliceblue;
     background-color: #b62121;
-    border: solid 2px rgb(13, 105, 13);
+    border: solid 2px rgb(23, 163, 23);
 }
 
 .hidden {
     display: none;
 }
 
-.door-img {
-    width: 200px;
-    height: 200px;
-}
 
-.todays-door .child {
-    background-color: rgb(39, 61, 33);
+.todays-door {
+    background-color: rgb(64, 163, 40);
 }
 
 /* Basic css class to allow for card flip for each door */
@@ -40,7 +36,7 @@
 footer {
     color: white;
     background-color: #b62121;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     width: 100%;
     display: flex;

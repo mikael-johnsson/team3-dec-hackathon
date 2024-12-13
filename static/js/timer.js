@@ -31,20 +31,20 @@ function remainingTimeForNextDoor() {
 remainingTimeForNextDoor();
 setInterval(remainingTimeForNextDoor, -1000);
 
-const timeToChrismas = document.getElementById("timeToChrismas");
+const timeToChristmas = document.getElementById("timeToChristmas");
 
-function timeLeftToChrismas() {
+function timeLeftToChristmas() {
     const now = new Date();
-    const chrismassTime = new Date(2024, 11, 25); 
-    const daysLeftToChrismas = chrismassTime.getDate() - now.getDate();
-    const hoursLeftToChrismas = (now.getHours() - 24) * -1;
-    const minutesLeftToChrismas = (now.getMinutes() - 60) * -1;
-    const secondsLeftToChrismas = (now.getSeconds() - 60) * -1;
+    const christmasTime = new Date(2024, 11, 25); 
+    const daysLeftToChristmas = christmasTime.getDate() - now.getDate();
+    const hoursLeftToChristmas = (now.getHours() - 24) * -1;
+    const minutesLeftToChristmas = (now.getMinutes() - 60) * -1;
+    const secondsLeftToChristmas = (now.getSeconds() - 60) * -1;
 
     // Format the string with leading zeroes
-   const clockStr = `Time for Chrismas: ${daysLeftToChrismas.toString().padStart(2, '0')} days ${hoursLeftToChrismas.toString().padStart(2, '0')}:${minutesLeftToChrismas.toString().padStart(2, '0')}:${secondsLeftToChrismas.toString().padStart(2, '0')}`;
-   timeToChrismas.innerText = clockStr;
+   const clockStr = `Time for Christmas: ${daysLeftToChristmas.toString().padStart(2, '0')} days ${hoursLeftToChristmas.toString().padStart(2, '0')}:${minutesLeftToChristmas.toString().padStart(2, '0')}:${secondsLeftToChristmas.toString().padStart(2, '0')}`;
+   timeToChristmas.innerText = clockStr;
 }
 
-timeLeftToChrismas();
-setInterval(timeLeftToChrismas, -1000);
+timeLeftToChristmas();
+setInterval(timeLeftToChristmas, -1000);
