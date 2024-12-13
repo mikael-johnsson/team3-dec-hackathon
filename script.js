@@ -47,6 +47,13 @@ function addContentToDoors(doors){
     });
 }
 
+/**
+ * 
+ * @param {array} doors - an array of all doors that are allowed to be opened
+ * creates an event listener for each door, so that when the door is clicked,
+ * it toggles between the door being open (content displaying) 
+ * and closed (default door displaying)
+ */
 function clickableDoors(doors){
     // console.log("clickable doors: ", doors);
     doors.forEach(door => {
@@ -60,6 +67,5 @@ function clickableDoors(doors){
         });
     });
 }
-
 
 addContentToDoors(doorsToOpen);
