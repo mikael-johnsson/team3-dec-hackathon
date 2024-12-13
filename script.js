@@ -50,6 +50,9 @@ addContentToDoors(doorsToOpen);
  * doorsToFlip can be updated to allowedDoors. This is where we could
  * check the date and display a message to the user if they try to
  * open a door when it's not yet that date.
+ * May have to create two separate css classes so that the front of the door
+ * displays the number, then when the door is clicked to flip, the back displays
+ * the door content listed in doors.js.
  */
 function flipDoor(doors) {
     doors.forEach((door) => {
