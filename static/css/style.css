@@ -46,13 +46,23 @@ header {
     background-color: rgb(64, 163, 40);
 }
 
-/* Basic css class to allow for card flip for each door */
-.card-flip {
-    transform-style: preserve-3d;
-    position: relative;
-    transition: all 0.5s ease-out;
-    transform: rotateY(180deg);
+/* Rule to apply the animation to the door */
+
+.card-shake {
+    animation: tilt-shaking 0.5s ease-in-out;
 }
+
+
+/* Animation for the shaking effect */
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
 
 /* Footer styles */
 footer {
