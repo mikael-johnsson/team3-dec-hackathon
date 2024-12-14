@@ -77,11 +77,11 @@ function highlightToday(doors){
         let doorDate = door.date.toDateString();
         if(doorDate == today){
             todaysDoor = door;
+            let targetDoor = document.getElementById(todaysDoor.id);
+            let doorHeader = targetDoor.querySelector('.card-header');
+            doorHeader.classList.add('todays-door');
         }
     });
-    let targetDoor = document.getElementById(todaysDoor.id);
-    let doorHeader = targetDoor.querySelector('.card-header');
-    doorHeader.classList.add('todays-door');
 }
 
 function getTodayDate() {
