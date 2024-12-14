@@ -65,6 +65,10 @@ footer {
     justify-content: space-evenly;
 }
 
+footer a {
+    color: white;
+}
+
 body {
     font-family: fantasy, sans-serif !important;
 }
