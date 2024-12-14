@@ -104,35 +104,39 @@ addContentToDoors(doorsToOpen);
  * the door content listed in doors.js.
  */
 function flipDoor(doors) {
-    // Retrieve saved opened doors from LocalStorage
+    // Retrieve saved opened doors from LocalStorage (or use an empty array)
     let openedDoors = JSON.parse(localStorage.getItem('openedDoors')) || [];
 
+    // Ensure doors are opened based on the stored state
     doors.forEach((door) => {
         if (openedDoors.includes(door.id)) {
-            door.classList.add('card-flip');
+            door.querySelector('.card').classList.add('card-flip');
         }
-    // Add Toggle for doors
+
+        // Add event listener for toggling door state
         door.addEventListener("click", function () {
-            this.classList.toggle('card-flip');
+            const card = this.querySelector('.card');
+            card.classList.toggle('card-flip');
 
-    // Update the openedDoors state
-        if (this.classList.contains('card-flip')) {
-    
-    // Add to opened doors
-        if (!openedDoors.includes(this.id)) {
-            openedDoors.push(this.id);
-        }
-        } else {
-    // Remove from opened doors
-        openedDoors = openedDoors.filter(id => id !== this.id);
-        }
+            // Update the openedDoors array
+            if (card.classList.contains('card-flip')) {
+                // Add door ID to openedDoors
+                if (!openedDoors.includes(door.id)) {
+                    openedDoors.push(door.id);
+                }
+            } else {
+                // Remove door ID from openedDoors
+                openedDoors = openedDoors.filter(id => id !== door.id);
+            }
 
-    // Save the updated state to LocalStorage
-        localStorage.setItem('openedDoors', JSON.stringify(openedDoors));
-        })
+            // Save the updated state to LocalStorage
+            localStorage.setItem('openedDoors', JSON.stringify(openedDoors));
+        });
     });
-};
-;
+}
 
-let doorsToFlip = document.querySelectorAll('.card');
+// Select all doors by their containing elements (e.g., .col)
+let doorsToFlip = document.querySelectorAll('[id^="door"]');
+
+// Initialize the flip functionality
 flipDoor(doorsToFlip);
