@@ -3,7 +3,7 @@
 
 /* Header styles */
 header {
-    background-color: #b62121;
+    background-color: #ae151a;
     color: white;
     padding: 10px;
     text-align: center;
@@ -33,7 +33,7 @@ header {
 
 .child {
     color: aliceblue;
-    background-color: #b62121;
+    background-color: #ae151a;
     border: solid 2px rgb(23, 163, 23);
 }
 
@@ -67,12 +67,16 @@ header {
 /* Footer styles */
 footer {
     color: white;
-    background-color: #b62121;
+    background-color: #ae151a;
     position: sticky;
     bottom: 0;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+}
+
+footer a {
+    color: white;
 }
 
 body {
