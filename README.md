@@ -1,20 +1,23 @@
 # 🎅✨ Hack the Holidays! 🎄🎁  
 
 ---
-test by kellyt
 ## **🎄 Hack the Holidays: Submission Details**  
 
 ### **Deployment**  
-(Please note: Your team must also include the deployed links in the usual submission in Hackapp.)  
+
+<!-- Add deployment steps here -->
+
 The project is deployed and can be accessed at:  
-**http://your-deployed-link.com**  
+**https://mikael-johnsson.github.io/team3-dec-hackathon/**  
 
 ---
 
 ### **Criteria**  
 In this section, we will briefly discuss how our team addressed the applicable criteria:  
 - 🎁 **The project fits the theme of celebrating the holidays.**  
+    - This project is based on the popular advent calendars which appear around Christmas time, usually filled with chocolate! (Unfortunately there is no chocolate in this one)
 - 🎁 **The project is well planned and executed (Using GitHub Projects/Kanban).**  
+    - Issues were created for tasks that needed to be done and assigned to contributors. The project board can be found [here](https://github.com/users/mikael-johnsson/projects/9/views/1)
 - 🎁 **The project has a basic README that follows the provided template.**  
 - 🎁 **The project has an overall sense of completeness.**  
 - 🎁 **The project showcases a strong sense of creativity and originality.**  
@@ -40,13 +43,8 @@ The **Goal** section provides a concise summary of the main objective or purpose
 ---
 
 ## **💻 Tech Stack**  
-In the **Tech** section, we provide information about the technology stack, dependencies, and any technical details related to the project.  
-For example:  
-- Frontend: HTML, CSS, JavaScript  
-- Backend: Python, Flask  
-- Database: PostgreSQL  
-- Version Control: Git & GitHub  
-- Deployment: [Insert Deployment Platform, e.g., Heroku, Netlify, etc.]  
+
+[Project name here] is a front-end project created using **HTML**, **CSS** and **JavaScript**. The front-end framework **Bootstrap** was also used to create the 'doors' on the advent calendar. Version control was done using **Git** and *GitHub*. The final project was deployed also on **GitHub**. 
 
 ---
 
@@ -55,5 +53,14 @@ In the **Credits** section, we acknowledge the resources, tools, or inspirations
 - Any tutorials or articles referenced  
 - Any open-source libraries or frameworks  
 - Any special mentions for contributors, teammates, or mentors  
+
+### Contributors
+
+- Liam
+- Kristian
+- Mikael
+- Mariam
+- Kelly
+- Luis
 
 ---

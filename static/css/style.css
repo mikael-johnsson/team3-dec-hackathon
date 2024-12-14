@@ -1,0 +1,44 @@
+/* All styles goes here */
+
+
+/* Header styles */
+
+/* Calendar styles */
+
+.container {
+    margin-bottom: 20px;
+}
+
+.child {
+    color: aliceblue;
+    background-color: #b62121;
+    border: solid 2px rgb(23, 163, 23);
+}
+
+.hidden {
+    display: none;
+}
+
+
+.todays-door {
+    background-color: rgb(64, 163, 40);
+}
+
+/* Basic css class to allow for card flip for each door */
+.card-flip {
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 0.5s ease-out;
+    transform: rotateY(180deg);
+}
+
+/* Footer styles */
+footer {
+    color: white;
+    background-color: #b62121;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
