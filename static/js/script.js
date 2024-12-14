@@ -104,9 +104,31 @@ addContentToDoors(doorsToOpen);
  * the door content listed in doors.js.
  */
 function flipDoor(doors) {
+    // Retrieve saved opened doors from LocalStorage
+    let openedDoors = JSON.parse(localStorage.getItem('openedDoors')) || [];
+
     doors.forEach((door) => {
+        if (openedDoors.includes(door.id)) {
+            door.classList.add('card-flip');
+        }
+    // Add Toggle for doors
         door.addEventListener("click", function () {
-            this.classList.add('card-flip')
+            this.classList.toggle('card-flip');
+
+    // Update the openedDoors state
+        if (this.classList.contains('card-flip')) {
+    
+    // Add to opened doors
+        if (!openedDoors.includes(this.id)) {
+            openedDoors.push(this.id);
+        }
+        } else {
+    // Remove from opened doors
+        openedDoors = openedDoors.filter(id => id !== this.id);
+        }
+
+    // Save the updated state to LocalStorage
+        localStorage.setItem('openedDoors', JSON.stringify(openedDoors));
         })
     });
 };
