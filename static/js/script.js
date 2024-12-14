@@ -25,6 +25,28 @@ function allowedDoors(doors) {
 
 let doorsToOpen = allowedDoors(doors);
 
+/**
+ * 
+ * @param{array} doors - array of all doors
+ * @return {array} notAllowedDoors - an array of all doors that aren't allowed
+ *  to be opened depending of todays date
+ */
+function notAllowedDoors(doors){
+    let notAllowerDoors = []
+    let today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    doors.forEach(door =>{
+        if (door.date > today){
+            notAllowerDoors.push(door)
+        }
+    });
+    // Returns an array of door objects that aren't allowed to be opened
+    return notAllowerDoors
+}
+
+let lookedDoors = notAllowedDoors(doors);
+
 
 /**
  * 
@@ -94,7 +116,7 @@ highlightToday(doorsToOpen);
 addContentToDoors(doorsToOpen);
 
 /**
- * Starter function to allow the doors to flip when a user clicks on them.
+ * Starter function to allow the doors to  shake when clicked
  * doorsToFlip can be updated to allowedDoors. This is where we could
  * check the date and display a message to the user if they try to
  * open a door when it's not yet that date.
@@ -144,3 +166,31 @@ function flipDoor(doorsToOpen) {
 
 flipDoor(doorsToOpen);
 
+/** 
+ * @param {array} lookedDoors - an array of all closed doors
+ * Add a click event listener to all closed doors to display a
+ * image with a meesage that the door is not allowed to be opened
+**/
+
+function notAllowedDoorsWarning(lookedDoors) {
+    lookedDoors.forEach(door => {
+        let lockedDoor = document.getElementById(door.id);
+        if (lockedDoor) {
+            // Add click event listener to the locked door
+            lockedDoor.addEventListener('click', function() {
+                const cardBody = lockedDoor.querySelector('.card-body');
+                const originalContent = cardBody.innerHTML;
+
+                // Add the Grinch image to the inner HTML
+                cardBody.innerHTML = '<img src="images/grinch.png" alt="Grinch" class="img-fluid" />';
+
+                // Remove the Grinch image and restore the original content after 2 seconds (2000 milliseconds)
+                setTimeout(() => {
+                    cardBody.innerHTML = originalContent;
+                }, 2000); 
+            });
+        }
+    });
+}
+
+notAllowedDoorsWarning(lookedDoors);
