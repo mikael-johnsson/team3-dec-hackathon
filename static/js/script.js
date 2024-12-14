@@ -102,38 +102,45 @@ addContentToDoors(doorsToOpen);
  * displays the number, then when the door is clicked to flip, the back displays
  * the door content listed in doors.js.
  */
-function flipDoor(doors) {
-    // Retrieve saved opened doors from LocalStorage
+function flipDoor(doorsToOpen) {
+    // Retrieve saved opened doors from LocalStorage or initialize an empty array
     let openedDoors = JSON.parse(localStorage.getItem('openedDoors')) || [];
 
-    doors.forEach((door) => {
-    // Add animation for doors
-        door.addEventListener("click", function () {
-            this.classList.add('card-shake');
+    // Iterate over the doorsToOpen array
+    for (let i = 0; i < doorsToOpen.length; i++) {
+        let door = doorsToOpen[i];
+        let doorElement = document.getElementById(door.id);
 
-    // Remove card shake
-        setTimeout(() => {
-            this.classList.remove('card-shake');
-        }, 500);
+        // Check if the door element exists in the DOM
+        if (doorElement) {
+            // Add click event listener to the door element
+            doorElement.addEventListener("click", function () {
+                // Add the card-shake class for the click effect
+                this.classList.add('card-shake');
 
-    // Update the openedDoors state
-        if (this.classList.contains('card-shake')) {
-    // Add to opened doors
-        if (!openedDoors.includes(this.id)) {
-            openedDoors.push(this.id);
+                // Remove the card-shake class after the animation completes
+                setTimeout(() => {
+                    this.classList.remove('card-shake');
+                }, 500); // Match the duration of the animation
+
+                // Update the openedDoors state
+                if (this.classList.contains('card-shake')) {
+                    // Add to opened doors if not already included
+                    if (!openedDoors.includes(this.id)) {
+                        openedDoors.push(this.id);
+                    }
+                } else {
+                    // Remove from opened doors if it exists
+                    openedDoors = openedDoors.filter(id => id !== this.id);
+                }
+
+                // Save the updated state to LocalStorage
+                localStorage.setItem('openedDoors', JSON.stringify(openedDoors));
+            });
         }
-        } else {
-    // Remove from opened doors
-        openedDoors = openedDoors.filter(id => id !== this.id);
-        }
-    // Save the updated state to LocalStorage
-        localStorage.setItem('openedDoors', JSON.stringify(openedDoors));
-        })
-    });
-};
-;
+    }
+}
 
-let doorsToFlip = document.querySelectorAll('.card');
-flipDoor(doorsToFlip);
 
+flipDoor(doorsToOpen);
 
