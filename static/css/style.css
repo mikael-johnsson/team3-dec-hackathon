@@ -63,6 +63,40 @@ header {
     100% { transform: rotate(0deg); }
   }
 
+/* Door styling */
+
+#row-one {
+    width: 20%;
+}
+
+#row-two {
+    width: 35%;
+}
+
+#row-three {
+    width: 50%;
+}
+
+#row-four{
+    width: 65%;
+}
+
+#row-five{
+    width: 80%;
+}
+
+#row-six{
+    width: 95%;
+}
+
+#trunk {
+    width: 75%;
+}
+
+.door-scroll {
+    max-height: 200px;
+    overflow-y: auto;
+}
 
 /* Footer styles */
 footer {
