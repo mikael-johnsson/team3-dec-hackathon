@@ -25,6 +25,28 @@ function allowedDoors(doors) {
 
 let doorsToOpen = allowedDoors(doors);
 
+/**
+ * 
+ * @param{array} doors - array of all doors
+ * @return {array} notAllowedDoors - an array of all doors that aren't allowed
+ *  to be opened depending of todays date
+ */
+function notAllowedDoors(doors){
+    let notAllowerDoors = []
+    let today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    doors.forEach(door =>{
+        if (door.date > today){
+            notAllowerDoors.push(door)
+        }
+    });
+    // Returns an array of door objects that aren't allowed to be opened
+    return notAllowerDoors
+}
+
+let lookedDoors = notAllowedDoors(doors);
+
 
 /**
  * 
@@ -60,7 +82,6 @@ function clickableDoors(doors){
             children.forEach(child => {
                 child.classList.toggle('hidden');
             });
-            
         });
     });
 }
@@ -77,11 +98,11 @@ function highlightToday(doors){
         let doorDate = door.date.toDateString();
         if(doorDate == today){
             todaysDoor = door;
+            let targetDoor = document.getElementById(todaysDoor.id);
+            let doorHeader = targetDoor.querySelector('.card-header');
+            doorHeader.classList.add('todays-door');
         }
     });
-    let targetDoor = document.getElementById(todaysDoor.id);
-    let doorHeader = targetDoor.querySelector('.card-header');
-    doorHeader.classList.add('todays-door');
 }
 
 function getTodayDate() {
@@ -95,7 +116,7 @@ highlightToday(doorsToOpen);
 addContentToDoors(doorsToOpen);
 
 /**
- * Starter function to allow the doors to flip when a user clicks on them.
+ * Starter function to allow the doors to  shake when clicked
  * doorsToFlip can be updated to allowedDoors. This is where we could
  * check the date and display a message to the user if they try to
  * open a door when it's not yet that date.
@@ -103,40 +124,73 @@ addContentToDoors(doorsToOpen);
  * displays the number, then when the door is clicked to flip, the back displays
  * the door content listed in doors.js.
  */
-function flipDoor(doors) {
-    // Retrieve saved opened doors from LocalStorage (or use an empty array)
+function flipDoor(doorsToOpen) {
+    // Retrieve saved opened doors from LocalStorage or initialize an empty array
     let openedDoors = JSON.parse(localStorage.getItem('openedDoors')) || [];
 
-    // Ensure doors are opened based on the stored state
-    doors.forEach((door) => {
-        if (openedDoors.includes(door.id)) {
-            door.querySelector('.card').classList.add('card-flip');
-        }
+    // Iterate over the doorsToOpen array
+    for (let i = 0; i < doorsToOpen.length; i++) {
+        let door = doorsToOpen[i];
+        let doorElement = document.getElementById(door.id);
 
-        // Add event listener for toggling door state
-        door.addEventListener("click", function () {
-            const card = this.querySelector('.card');
-            card.classList.toggle('card-flip');
+        // Check if the door element exists in the DOM
+        if (doorElement) {
+            // Add click event listener to the door element
+            doorElement.addEventListener("click", function () {
+                // Add the card-shake class for the click effect
+                this.classList.add('card-shake');
 
-            // Update the openedDoors array
-            if (card.classList.contains('card-flip')) {
-                // Add door ID to openedDoors
-                if (!openedDoors.includes(door.id)) {
-                    openedDoors.push(door.id);
+                // Remove the card-shake class after the animation completes
+                setTimeout(() => {
+                    this.classList.remove('card-shake');
+                }, 500); // Match the duration of the animation
+
+                // Update the openedDoors state
+                if (this.classList.contains('card-shake')) {
+                    // Add to opened doors if not already included
+                    if (!openedDoors.includes(this.id)) {
+                        openedDoors.push(this.id);
+                    }
+                } else {
+                    // Remove from opened doors if it exists
+                    openedDoors = openedDoors.filter(id => id !== this.id);
                 }
-            } else {
-                // Remove door ID from openedDoors
-                openedDoors = openedDoors.filter(id => id !== door.id);
-            }
 
-            // Save the updated state to LocalStorage
-            localStorage.setItem('openedDoors', JSON.stringify(openedDoors));
-        });
+                // Save the updated state to LocalStorage
+                localStorage.setItem('openedDoors', JSON.stringify(openedDoors));
+            });
+        }
+    }
+}
+
+
+flipDoor(doorsToOpen);
+
+/** 
+ * @param {array} lookedDoors - an array of all closed doors
+ * Add a click event listener to all closed doors to display a
+ * image with a meesage that the door is not allowed to be opened
+**/
+
+function notAllowedDoorsWarning(lookedDoors) {
+    lookedDoors.forEach(door => {
+        let lockedDoor = document.getElementById(door.id);
+        if (lockedDoor) {
+            // Add click event listener to the locked door
+            lockedDoor.addEventListener('click', function() {
+                const cardBody = lockedDoor.querySelector('.card-body');
+                const originalContent = cardBody.innerHTML;
+
+                // Add the Grinch image to the inner HTML
+                cardBody.innerHTML = '<img src="../../images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;">';
+
+                // Remove the Grinch image and restore the original content after 2 seconds (2000 milliseconds)
+                setTimeout(() => {
+                    cardBody.innerHTML = originalContent;
+                }, 2000);
+            });
+        }
     });
 }
 
-// Select all doors by their containing elements (e.g., .col)
-let doorsToFlip = document.querySelectorAll('[id^="door"]');
-
-// Initialize the flip functionality
-flipDoor(doorsToFlip);
+notAllowedDoorsWarning(lookedDoors);
