@@ -9,10 +9,26 @@ header {
     text-align: center;
 }
 
+#main-container {
+    display: flex;
+}
+
+/* Timer Styles */
+
+#timer {
+    width: 220px;
+    height: 130px;
+    border: solid 2px rgb(23, 163, 23);
+    margin: 10px;
+}
+
 /* Calendar styles */
 
-.container {
-    margin-bottom: 20px;
+.calendar-container {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 .child {
