@@ -93,6 +93,11 @@ header {
     width: 75%;
 }
 
+.door-scroll {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
 /* Footer styles */
 footer {
     color: white;
