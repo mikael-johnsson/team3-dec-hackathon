@@ -9,6 +9,7 @@
 
 body {
     font-family: fantasy, sans-serif !important;
+    min-height: 100svh;
 }
 
 /* Header styles */
@@ -46,16 +47,16 @@ header {
     
 }
 
-.card:not(.card-flip){
+/* .card:not(.card-shake){
     background-image: url("../../images/christmas-colour.webp");
-}
+} */
 
-.card:not(.card-flip) > .card-img-top,
-.card:not(.card-flip) > .card-header,
-.card:not(.card-flip) > .card-body
+/* .card:not(.card-shake) > .card-img-top,
+.card:not(.card-shake) > .card-header,
+.card:not(.card-shake) > .card-body
 {
     visibility: hidden;
-}
+} */
 
 .child {
     color: aliceblue;
@@ -128,7 +129,7 @@ header {
 footer {
     color: white;
     background-color: var(--primary-red);
-    /* position: sticky; */
+    position:relative;
     bottom: 0;
     width: 100%;
     display: flex;
