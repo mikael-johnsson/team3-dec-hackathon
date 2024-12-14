@@ -66,5 +66,5 @@ footer {
 }
 
 body {
-    font-family: "Papyrus", "fantasy";
+    font-family: fantasy, sans-serif !important;
 }
