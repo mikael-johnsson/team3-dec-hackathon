@@ -1,9 +1,19 @@
 /* All styles goes here */
 
+/* Variables */
+:root {
+  --primary-red: #b62121;
+  --primary-green: #17a317;
+}
+
+
+body {
+    font-family: fantasy, sans-serif !important;
+}
 
 /* Header styles */
 header {
-    background-color: #b62121;
+    background-color: var(--primary-red);
     color: white;
     padding: 10px;
     text-align: center;
@@ -18,7 +28,7 @@ header {
 #timer {
     width: 220px;
     height: 130px;
-    border: solid 2px rgb(23, 163, 23);
+    border: solid 2px var(--primary-green);
     margin: 10px;
 }
 
@@ -31,10 +41,26 @@ header {
     margin: 20px;
 }
 
+.card {
+    margin-bottom: 32px;
+    
+}
+
+.card:not(.card-flip){
+    background-image: url("../../images/christmas-colour.webp");
+}
+
+.card:not(.card-flip) > .card-img-top,
+.card:not(.card-flip) > .card-header,
+.card:not(.card-flip) > .card-body
+{
+    visibility: hidden;
+}
+
 .child {
     color: aliceblue;
-    background-color: #b62121;
-    border: solid 2px rgb(23, 163, 23);
+    background-color: var(--primary-red);
+    border: solid 2px var(--primary-green);
 }
 
 .hidden {
@@ -43,28 +69,46 @@ header {
 
 
 .todays-door {
-    background-color: rgb(64, 163, 40);
+    background-color: var(--primary-green);
 }
 
 /* Basic css class to allow for card flip for each door */
 .card-flip {
     transform-style: preserve-3d;
     position: relative;
-    transition: all 0.5s ease-out;
+    transition: all  0.5s ease-out;
     transform: rotateY(180deg);
 }
 
 /* Footer styles */
 footer {
     color: white;
-    background-color: #b62121;
-    position: sticky;
+    background-color: var(--primary-red);
+    /* position: sticky; */
     bottom: 0;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+
+    
 }
 
-body {
-    font-family: fantasy, sans-serif !important;
+.footer ul{
+    list-style: none;
+    column-count: 2; 
+    column-gap: 20px;
+    padding: 0;
 }
+
+.footer a {
+        font-weight: 600;
+        text-decoration: none; 
+        color: inherit; 
+        transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.5);
+        text-decoration: underline;
+    }
+}
+
