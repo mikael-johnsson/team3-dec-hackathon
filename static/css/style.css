@@ -64,3 +64,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
 }
+
+body {
+    font-family: Papyrus, fantasy;
+}
