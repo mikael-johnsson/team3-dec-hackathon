@@ -42,7 +42,7 @@ function timeLeftToChristmas() {
     const secondsLeftToChristmas = (now.getSeconds() - 60) * -1;
 
     // Format the string with leading zeroes
-   const clockStr = `Time for Christmas: ${daysLeftToChristmas.toString().padStart(2, '0')} days ${hoursLeftToChristmas.toString().padStart(2, '0')}:${minutesLeftToChristmas.toString().padStart(2, '0')}:${secondsLeftToChristmas.toString().padStart(2, '0')}`;
+   const clockStr = `Time until Christmas: ${daysLeftToChristmas.toString().padStart(2, '0')} days ${hoursLeftToChristmas.toString().padStart(2, '0')}:${minutesLeftToChristmas.toString().padStart(2, '0')}:${secondsLeftToChristmas.toString().padStart(2, '0')}`;
    timeToChristmas.innerText = clockStr;
 }
 

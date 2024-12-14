@@ -64,7 +64,7 @@ header {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 
@@ -72,12 +72,56 @@ header {
     background-color: var(--primary-green);
 }
 
-/* Basic css class to allow for card flip for each door */
-.card-flip {
-    transform-style: preserve-3d;
-    position: relative;
-    transition: all  0.5s ease-out;
-    transform: rotateY(180deg);
+/* Rule to apply the animation to the door */
+
+.card-shake {
+    animation: tilt-shaking 0.5s ease-in-out;
+}
+
+
+/* Animation for the shaking effect */
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+/* Door styling */
+
+#row-one {
+    width: 20%;
+}
+
+#row-two {
+    width: 35%;
+}
+
+#row-three {
+    width: 50%;
+}
+
+#row-four{
+    width: 65%;
+}
+
+#row-five{
+    width: 80%;
+}
+
+#row-six{
+    width: 95%;
+}
+
+#trunk {
+    width: 75%;
+}
+
+.door-scroll {
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 /* Footer styles */

@@ -78,7 +78,6 @@ const doors = [
             text: "What does Santa do when his elves misbehave? He gives them the sack.",
             img: "images/santa_door1.jpg",
         }
-        
     },
     {
         id: "door11",
