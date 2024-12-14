@@ -44,7 +44,7 @@ The **Goal** section provides a concise summary of the main objective or purpose
 
 ## **💻 Tech Stack**  
 
-[Project name here] is a front-end project created using **HTML**, **CSS** and **JavaScript**. The front-end framework **Bootstrap** was also used to create the 'doors' on the advent calendar. Version control was done using **Git** and *GitHub*. The final project was deployed also on **GitHub**. 
+**The Interactive Advent Calendar** is a front-end project created using *HTML*, *CSS* and *JavaScript*. The front-end framework *Bootstrap* was also used to create the 'doors' on the advent calendar. Version control was done using *Git* and *GitHub*. The final project was deployed also on *GitHub*. 
 
 ---
 
