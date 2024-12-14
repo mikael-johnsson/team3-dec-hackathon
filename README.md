@@ -35,10 +35,10 @@ This could include how our project embodies the **Hack the Holidays** spirit and
 ### **Goal**  
 The **Goal** section provides a concise summary of the main objective or purpose of the project described in this README. It addresses the following aspects:  
 
-- 🎄 **Problem Statement:** A brief description of the holiday-related issue or gap our project aims to address.  
-- 🎄 **Objective(s):** What does our project set out to achieve?  
-- 🎄 **Target Audience:** Who will benefit from this project?  
-- 🎄 **Benefits:** How will this project make the holidays brighter, more inclusive, or more joyful?  
+- 🎄 **Problem Statement:** <br> When you think of an original advent calendar, you think of the one you purchase from your local shops and retail stores. You very rarely see a online, **interactive** advent calendar.   
+- 🎄 **Objective(s):** <br> Users can interact with the calendar day to day, with each day allowing the user to interact with a new door. Each door provides it own **unique** content. Leading to a new <em>fun fact, riddle, joke or image related to Christmas</em>. The aim is to allow users to have fun while also counting down the days to Christmas.  
+- 🎄 **Target Audience:** <br> Anyone who would like to experience a unique way to enjoy the countdown to Christmas and may not of had a chance to purchase a traditional advent calender. Just pop online and enjoy.
+- 🎄 **Benefits:** <br>This project can be a **joyful** daily interaction for families, couples, youths to make for a fun festive way to count down the days to Christmas. Find a fun fact about Christmas, solve a Christmas riddle or have a festive laugh with a joke or two.   
 
 ---
 
@@ -56,11 +56,11 @@ In the **Credits** section, we acknowledge the resources, tools, or inspirations
 
 ### Contributors
 
-- Liam
-- Kristian
-- Mikael
-- Mariam
-- Kelly
-- Luis
+- Liam Goddard <br> [GitHub](https://github.com/caleom)
+- Kristian Cross <br> [Github](https://github.com/KC-85)
+- Mikael Johnsson <br> [GitHub](https://github.com/mikael-johnsson)
+- Mariam Ayoub <br> [GitHub](https://github.com/mariam138)
+- Kelly Thompson <br> [GitHub](https://github.com/KellyT44)
+- Luis Goncalves <br>  [GitHub](https://github.com/Luisg882)
 
 ---
