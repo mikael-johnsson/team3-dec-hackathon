@@ -11,7 +11,8 @@ const doors = [
         id: "door2",
         date: new Date('2024-12-02T00:00:00'),
         content: {
-            text: "It takes about 15 years to grow the average Christmas tree. Alabama was the first state to officially recognize Christmas in 1836. Oklahoma was the last, in 1907. Santa Claus is based on a real person: St. Nikolas of Myra.", 
+            text: "It takes about 15 years to grow the average Christmas tree. Alabama was the first state to officially recognize Christmas in 1836. Oklahoma was the last, in 1907. Santa Claus is based on a real person: St. Nikolas of Myra.",
+            img: "images/santa_door1.jpg",
         }
     },
     {
@@ -19,7 +20,7 @@ const doors = [
         date: new Date('2024-12-03T00:00:00'),
         content: {
             text: "I come with many colors, very big and bright, I turn so many houses into a beautiful sight. What am I?",
-
+            img: "images/santa_door1.jpg",
         } 
     },
     {
@@ -27,6 +28,7 @@ const doors = [
         date: new Date('2024-12-04T00:00:00'),
         content: {
             text: "We all love to sing along to Jingle Bells, but have you ever noticed that the song doesn’t have the word Christmas in it? Or Jesus or Santa Claus? That’s because it wasn’t originally a Christmas song! In fact, the jolly anthem was written in 1850, entitled One Horse Open Sleigh, for the American holiday, Thanksgiving!",
+            img: "images/santa_door1.jpg",
         }
     },
     {
@@ -34,6 +36,7 @@ const doors = [
         date: new Date('2024-12-05T00:00:00'),
         content: {
             text: "Christmas trees also became popular in Victorian Britain. But these were first seen in 16th Century Germany where, at Christmas time, people decorated fir trees with fruit and nuts and later sweets, paper shapes and candles. Amazingly, historians think the origins of this festive tradition may date back to the Romans and Ancient Egyptians, who used evergreen plants and garlands as symbols of everlasting life. Wow!",
+            img: "images/santa_door1.jpg",
         } 
     },
     {
@@ -49,6 +52,7 @@ const doors = [
         date: new Date('2024-12-07T00:00:00'),
         content: {
             text: "Fun fact Santa has an official pilot’s license! In 1927, the US government officially issued Santa with a pilot’s license!",
+            img: "images/santa_door1.jpg",
         }
     },
     {
@@ -56,6 +60,7 @@ const doors = [
         date: new Date('2024-12-08T00:00:00'),
         content:  {
             text: "What do you get if you cross Santa with a duck? A Christmas Quacker",
+            img: "images/santa_door1.jpg",
         } 
     },
     {
@@ -63,6 +68,7 @@ const doors = [
         date: new Date('2024-12-09T00:00:00'),
         content: {
             text: "The world’s tallest Christmas tree was 221ft high and was displayed in a Washington shopping mall in 1950",
+            img: "images/santa_door1.jpg",
         }
     },
     {
@@ -70,8 +76,8 @@ const doors = [
         date: new Date('2024-12-10T00:00:00'),
         content: {
             text: "What does Santa do when his elves misbehave? He gives them the sack.",
+            img: "images/santa_door1.jpg",
         }
-        
     },
     {
         id: "door11",
@@ -86,6 +92,7 @@ const doors = [
         date: new Date('2024-12-12T00:00:00'),
         content: {
             text: "I'm a cookie you might like to eat, and some might say I'm a favored Christmas treat. I have brown arms, eyes and don't forget my feet. What am I?",
+            img: "images/santa_door1.jpg",
         } 
     },
     {
@@ -99,7 +106,10 @@ const doors = [
     {
         id: "door14",
         date: new Date('2024-12-14T00:00:00'),
-        content: "What do you call an obnoxious reindeer? Rude-olph",
+        content: {
+            text: "What do you call an obnoxious reindeer? Rude-olph",
+            img: "images/santa_door1.jpg",
+        }
     },
     {
         id: "door15",
@@ -114,6 +124,7 @@ const doors = [
         date: new Date('2024-12-16T00:00:00'),
         content: {
             text: "I got a universal remote control for Christmas. This changes everything.",
+            img: "images/santa_door1.jpg",
         }
     },
     {
@@ -121,6 +132,7 @@ const doors = [
         date: new Date('2024-12-17T00:00:00'),
         content: {
             text: "Gingerbread houses. The largest gingerbread house ever built was 1,110 square meters and 3.07 meters tall. It was built in Texas in 2013 as a charity fundraiser for a hospital",
+            img: "images/santa_door1.jpg",
         } 
     },
     {
@@ -136,6 +148,7 @@ const doors = [
         date: new Date('2024-12-19T00:00:00'),
         content: {
             text: "On Christmas Eve, Santa leaves his workshop in the North Pole to deliver presents to all the good children. What direction does he travel?",
+            img: "images/santa_door1.jpg",
         } 
     },
     {
@@ -143,6 +156,7 @@ const doors = [
         date: new Date('2024-12-20T00:00:00'),
         content: {
             text: "Jingle Bells. The popular Christmas song was originally written for Thanksgiving by James Pierpont. It was the first song played in space, during NASA's Gemini 6A mission in 1965.",
+            img: "images/santa_door1.jpg",
         } 
     },
     {
@@ -150,6 +164,7 @@ const doors = [
         date: new Date('2024-12-21T00:00:00'),
         content: {
             text: "How did the bauble know that she was addicted to Christmas? She’d been hooked on Christmas trees all her life.",
+            img: "images/santa_door1.jpg",
         }
     },
     {
@@ -165,6 +180,7 @@ const doors = [
         date: new Date('2024-12-23T00:00:00'),
         content: {
             text: "What did the snowman say to the aggressive carrot? Get out of my face.",
+            img: "images/santa_door1.jpg",
         } 
     },
     {
@@ -172,6 +188,7 @@ const doors = [
         date: new Date('2024-12-24T00:00:00'),
         content: {
             text: "I am a helpful creature, I'm not too big and not too small. Out of all my fellow reindeer, you could say I'm the fastest of them all. Who am I?",
+            img: "images/santa_door1.jpg",
         } 
     },
 ]

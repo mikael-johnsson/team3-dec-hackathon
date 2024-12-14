@@ -32,7 +32,7 @@
 
     <div id="main-container">
         <!-- Timer Section -->
-        <aside id="timer">
+        <aside class="d-sm-block d-none" id="timer">
             <div id="currentTime"></div>
             <div id="timeToNextDoor"></div>
             <div id="timeToChristmas"></div>
@@ -43,9 +43,12 @@
         <section class="calendar-container">
             <!-- Calendar  Doors -->
             <!-- Door 24 -->
-            <div class="row text-center">
-                <div class="col" id="door24">
-                    <div class="card mx-auto">
+            <div class="row text-center mx-auto pb-2" id="row-one">
+                <div class="col parent" id="door24">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">24</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">24</div>
                         <div class="card-body"></div>
@@ -54,16 +57,22 @@
             </div>
 
             <!-- Doors 22 and 23 -->
-            <div class="row text-center">
-                <div class="col-6" id="door22">
-                    <div class="card mx-auto">
+            <div class="row text-center mx-auto pb-2" id="row-two">
+                <div class="col-6 parent" id="door22">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">22</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">22</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-6" id="door23">
-                    <div class="card mx-auto">
+                <div class="col-6 parent" id="door23">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">23</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">23</div>
                         <div class="card-body" ></div>
@@ -72,23 +81,32 @@
             </div>
 
             <!-- Doors 19, 20, 21 -->
-            <div class="row text-center">
-                <div class="col-4" id="door19">
-                    <div class="card mx-auto">
+            <div class="row text-center mx-auto pb-2" id="row-three">
+                <div class="col-4 parent" id="door19">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">19</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">19</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-4" id="door20">
-                    <div class="card mx-auto">
+                <div class="col-4 parent" id="door20">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">20</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">20</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-4" id="door21">
-                    <div class="card mx-auto">
+                <div class="col-4 parent" id="door21">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">21</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">21</div>
                         <div class="card-body" ></div>
@@ -97,30 +115,42 @@
             </div>
 
             <!-- Doors 15, 16, 17, 18 -->
-            <div class="row text-center">
-                <div class="col-3" id="door15">
-                    <div class="card mx-auto">
+            <div class="row text-center mx-auto pb-2" id="row-four">
+                <div class="col-3 parent" id="door15">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">15</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">15</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-3" id="door16">
-                    <div class="card mx-auto">
+                <div class="col-3 parent" id="door16">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">16</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">16</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-3" id="door17">
-                    <div class="card mx-auto">
+                <div class="col-3 parent" id="door17">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">17</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">17</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-3" id="door18">
-                    <div class="card mx-auto">
+                <div class="col-3 parent" id="door18">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">18</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">18</div>
                         <div class="card-body" ></div>
@@ -129,37 +159,52 @@
             </div>
 
             <!-- Doors 10, 11, 12, 13, 14 -->
-            <div class="row text-center">
-                <div class="col-3" id="door10">
-                    <div class="card mx-auto">
+            <div class="row text-center mx-auto pb-2" id="row-five">
+                <div class="col-3 parent" id="door10">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">10</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">10</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-2" id="door11">
-                    <div class="card mx-auto">
+                <div class="col-2 parent" id="door11">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">11</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">11</div>
                         <div class="card-body"></div>
                     </div>
                 </div>
-                <div class="col-2" id="door12">
-                    <div class="card mx-auto">
+                <div class="col-2 parent" id="door12">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">12</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">12</div>
                         <div class="card-body"></div>
                     </div>
                 </div>
-                <div class="col-2" id="door13">
-                    <div class="card mx-auto">
+                <div class="col-2 parent" id="door13">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">13</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">13</div>
                         <div class="card-body"></div>
                     </div>
                 </div>
-                <div class="col-3" id="door14">
-                    <div class="card mx-auto">
+                <div class="col-3 parent" id="door14">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">14</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">14</div>
                         <div class="card-body" ></div>
@@ -168,44 +213,62 @@
             </div>
 
             <!-- Doors 4, 5, 6, 7, 8, 9 -->
-            <div class="row text-center">
-                <div class="col-2" id="door4">
-                    <div class="card mx-auto">
+            <div class="row text-center mx-auto pb-2" id="row-six">
+                <div class="col-2 parent" id="door4">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">4</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">4</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-2" id="door5">
-                    <div class="card mx-auto">
+                <div class="col-2 parent" id="door5">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">5</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">5</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-2" id="door6">
-                    <div class="card mx-auto">
+                <div class="col-2 parent" id="door6">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">6</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">6</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-2" id="door7">
-                    <div class="card mx-auto">
+                <div class="col-2 parent" id="door7">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">7</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">7</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-2" id="door8">
-                    <div class="card mx-auto">
+                <div class="col-2 parent" id="door8">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">8</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">8</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-2" id="door9">
-                    <div class="card mx-auto">
+                <div class="col-2 parent" id="door9">
+                    <div class="card me-auto door-scroll child">
+                        <div class="card-header ">9</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">9</div>
                         <div class="card-body" ></div>
@@ -214,23 +277,32 @@
             </div>
 
             <!-- Doors in tree trunk: 1, 2, 3 -->
-            <div class="row text-center">
-                <div class="col-4" id="door1">
-                    <div class="card mx-auto">
+            <div class="row text-center mx-auto pb-2" id="trunk">
+                <div class="col-4 parent" id="door1">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">1</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">1</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-4" id="door2">
-                    <div class="card mx-auto">
+                <div class="col-4 parent" id="door2">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">2</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">2</div>
                         <div class="card-body" ></div>
                     </div>
                 </div>
-                <div class="col-4" id="door3">
-                    <div class="card mx-auto">
+                <div class="col-4 parent" id="door3">
+                    <div class="card mx-auto door-scroll child">
+                        <div class="card-header ">3</div>
+                    </div>
+                    <div class="card mx-auto hidden child">
                         <img src="" class="card-img-top" alt="" />
                         <div class="card-header">3</div>
                         <div class="card-body" ></div>
@@ -242,20 +314,20 @@
     </div>
 
     <!-- Footer starts here -->
-    <footer>
+    <footer class="footer p-3">
         <div>
-            <p>This site was a contender in the Code Institute december 2024 hackathon.</p>
-            <p>Find the link to the GitHub repository here: <a href="https://github.com/mikael-johnsson/team3-dec-hackathon">GitHub</a></p>
+            <p><i class="fa-solid fa-sleigh"></i> Created for the Code Institute December 2024 hackathon. <i class="fa-solid fa-sleigh"></i></p>
+            <p>Find the link to the GitHub repository here: <a href="https://github.com/mikael-johnsson/team3-dec-hackathon">GitHub <i class="fa-brands fa-github"></i></a></p>
         </div>
         <div>
-            <p>This project was created by:</p>
+            <p class="text-center">Santas Elves:</p>
             <ul>
-                <li><a href="https://github.com/mikael-johnsson">Mikael Johnsson</a></li>
-                <li><a href="#"></a>placeholder name</li>
-                <li><a href="#"></a>placeholder name</li>
-                <li><a href="#"></a>placeholder name</li>
-                <li><a href="#"></a>placeholder name</li>
-                <li><a href="#"></a>placeholder name</li>
+                <li><a href="https://github.com/mikael-johnsson">Mikael Johnsson <i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://github.com/caleom">Liam Goddard <i class="fa-brands fa-github"></i></a></li>
+                <li><a href="#"></a>Mariam Ayoub <i class="fa-brands fa-github"></i></li>
+                <li><a href="#"></a>Kelly Thompson <i class="fa-brands fa-github"></i></li>
+                <li><a href="#"></a>Luis Goncalves <i class="fa-brands fa-github"></i></li>
+                <li><a href="#"></a>Kristian Cross <i class="fa-brands fa-github"></i></li>
             </ul>
         </div>
     </footer>
@@ -265,5 +337,8 @@
     <script type="module" src="static/js/script.js"></script>
     <script type="module" src="static/js/timer.js"></script>
     <script type="module" src="static/js/doors.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/668de150a5.js" crossorigin="anonymous"></script>
 </body>
 </html>
