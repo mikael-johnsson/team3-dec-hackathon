@@ -60,7 +60,6 @@ function clickableDoors(doors){
             children.forEach(child => {
                 child.classList.toggle('hidden');
             });
-            
         });
     });
 }
@@ -108,16 +107,17 @@ function flipDoor(doors) {
     let openedDoors = JSON.parse(localStorage.getItem('openedDoors')) || [];
 
     doors.forEach((door) => {
-        if (openedDoors.includes(door.id)) {
-            door.classList.add('card-flip');
-        }
-    // Add Toggle for doors
+    // Add animation for doors
         door.addEventListener("click", function () {
-            this.classList.toggle('card-flip');
+            this.classList.add('card-shake');
+
+    // Remove card shake
+        setTimeout(() => {
+            this.classList.remove('card-shake');
+        }, 500);
 
     // Update the openedDoors state
-        if (this.classList.contains('card-flip')) {
-    
+        if (this.classList.contains('card-shake')) {
     // Add to opened doors
         if (!openedDoors.includes(this.id)) {
             openedDoors.push(this.id);
@@ -126,7 +126,6 @@ function flipDoor(doors) {
     // Remove from opened doors
         openedDoors = openedDoors.filter(id => id !== this.id);
         }
-
     // Save the updated state to LocalStorage
         localStorage.setItem('openedDoors', JSON.stringify(openedDoors));
         })
@@ -136,3 +135,5 @@ function flipDoor(doors) {
 
 let doorsToFlip = document.querySelectorAll('.card');
 flipDoor(doorsToFlip);
+
+
