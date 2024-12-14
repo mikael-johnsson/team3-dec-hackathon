@@ -19,7 +19,6 @@ const doors = [
         date: new Date('2024-12-03T00:00:00'),
         content: {
             text: "I come with many colors, very big and bright, I turn so many houses into a beautiful sight. What am I?",
-
         } 
     },
     {
@@ -71,7 +70,6 @@ const doors = [
         content: {
             text: "What does Santa do when his elves misbehave? He gives them the sack.",
         }
-        
     },
     {
         id: "door11",
