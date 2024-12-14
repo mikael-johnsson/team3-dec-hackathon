@@ -161,6 +161,7 @@ body {
     font-family: fantasy, sans-serif !important;
 }
 
+<<<<<<< HEAD
 .grinch {
     background-image: url('../../images/grinch.png');
     background-size: cover;
@@ -173,3 +174,6 @@ body {
     left: 0;
     z-index: 10;
 }
+=======
+/* Rule for grinch animation */
+>>>>>>> d41a797da82b38b8e516f8d9e54c9b5bcfe4099c
