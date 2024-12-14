@@ -157,11 +157,19 @@ footer {
     }
 }
 
-<<<<<<< HEAD
 body {
     font-family: fantasy, sans-serif !important;
 }
 
-/* Rule for grinch animation */
-=======
->>>>>>> 49c1176674554817bebc0f6d123918e35d227c76
+.grinch {
+    background-image: url('../../images/grinch.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}

@@ -182,12 +182,12 @@ function notAllowedDoorsWarning(lookedDoors) {
                 const originalContent = cardBody.innerHTML;
 
                 // Add the Grinch image to the inner HTML
-                cardBody.innerHTML = '<img src="images/grinch.png" alt="Grinch" class="img-fluid" />';
+                cardBody.innerHTML = '<img src="../../images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;">';
 
                 // Remove the Grinch image and restore the original content after 2 seconds (2000 milliseconds)
                 setTimeout(() => {
                     cardBody.innerHTML = originalContent;
-                }, 2000); 
+                }, 2000);
             });
         }
     });
