@@ -99,7 +99,11 @@ const doors = [
     {
         id: "door14",
         date: new Date('2024-12-14T00:00:00'),
-        content: "What do you call an obnoxious reindeer? Rude-olph",
+        content:
+        {
+            text: "What do you call an obnoxious reindeer? Rude-olph",
+            img: "",
+        },
     },
     {
         id: "door15",
