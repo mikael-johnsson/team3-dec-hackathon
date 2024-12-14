@@ -176,8 +176,18 @@ function notAllowedDoorsWarning(lookedDoors) {
     lookedDoors.forEach(door => {
         let lockedDoor = document.getElementById(door.id);
         if (lockedDoor) {
+            // Add click event listener to the locked door
             lockedDoor.addEventListener('click', function() {
-                lockedDoor.querySelector('.card-body').innerHTML = "This door is not allowed to be opened yet";
+                const cardBody = lockedDoor.querySelector('.card-body');
+                const originalContent = cardBody.innerHTML;
+
+                // Add the Grinch image to the inner HTML
+                cardBody.innerHTML = '<img src="images/grinch.png" alt="Grinch" class="img-fluid" />';
+
+                // Remove the Grinch image and restore the original content after 2 seconds (2000 milliseconds)
+                setTimeout(() => {
+                    cardBody.innerHTML = originalContent;
+                }, 2000); 
             });
         }
     });
