@@ -78,7 +78,7 @@ function clickableDoors(doors){
     doors.forEach(door => {
         let targetDoor = document.getElementById(door.id);
         const children = targetDoor.querySelectorAll('.child');
-        targetDoor.addEventListener('click', (e) => {
+        targetDoor.addEventListener('click', () => {
             children.forEach(child => {
                 child.classList.toggle('hidden');
             });
@@ -105,6 +105,10 @@ function highlightToday(doors){
     });
 }
 
+/**
+ * 
+ * @returns {string} today - returns todays date in the format of a string
+ */
 function getTodayDate() {
     const today = new Date();
     today.setHours(0, 0, 0, 0); // Set time to 00:00:00
