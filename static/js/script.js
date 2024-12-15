@@ -183,7 +183,7 @@ function notAllowedDoorsWarning(lookedDoors) {
         if (lockedDoor) {
             // Add click event listener to the locked door
             lockedDoor.addEventListener('click', function() {
-                const cardBody = lockedDoor.querySelector('.card-body');
+                const cardBody = lockedDoor.querySelector('.card-header');
                 const originalContent = cardBody.innerHTML;
 
                 // Add the Grinch image to the inner HTML
