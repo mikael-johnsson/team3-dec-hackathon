@@ -13,8 +13,11 @@
 
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: fantasy, sans-serif !important;
     min-height: 100svh;
+    min-height: 100vh;
 }
 
 /* Header styles */
@@ -26,7 +29,9 @@ header {
 }
 
 #main-container {
+    flex: 1;
     display: flex;
+    justify-content: space-evenly;
 }
 
 /* Timer Styles */
@@ -50,9 +55,8 @@ header {
 
 .calendar-container {
     flex: 1;
-    justify-content: center;
-    align-items: center;
     margin: 20px;
+    align-self: center;
 }
 
 .card {
