@@ -140,6 +140,9 @@ function flipDoor(doorsToOpen) {
         // Check if the door element exists in the DOM
         if (doorElement) {
             // Apply the "open" state for doors saved in LocalStorage
+            // BUG: this is causing some of the doors to shake when the page is first opened
+            // removing the 'card-shake' class stops that from happening but doesnt show an
+            // 'open' door, so this needs fixing
             if (openedDoors.includes(door.id)) {
                 doorElement.classList.add('card-shake'); // Keep door open
             }
