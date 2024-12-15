@@ -177,25 +177,41 @@ flipDoor(doorsToOpen);
  * image with a meesage that the door is not allowed to be opened
 **/
 
-function notAllowedDoorsWarning(lookedDoors) {
-    lookedDoors.forEach(door => {
+function notAllowedDoorsWarning(lockedDoors) {
+    // Variable to track the currently active door and its timeout
+    let activeTimeout = null;
+    let activeDoor = null;
+
+    lockedDoors.forEach(door => {
         let lockedDoor = document.getElementById(door.id);
         if (lockedDoor) {
             // Add click event listener to the locked door
             lockedDoor.addEventListener('click', function() {
-                const cardBody = lockedDoor.querySelector('.card-header');
-                const originalContent = cardBody.innerHTML;
+                const cardHeader = lockedDoor.querySelector('.card-header');
+                const originalContent = cardHeader.innerHTML;
+
+                // If another door is already active, clear its timeout and restore its content
+                if (activeDoor && activeDoor !== lockedDoor) {
+                    const prevCardHeader = activeDoor.querySelector('.card-header');
+                    clearTimeout(activeTimeout);
+                    prevCardHeader.innerHTML = prevCardHeader.dataset.originalContent; // Restore previous content
+                }
+
+                // Save original content to a dataset for safe restoration
+                cardHeader.dataset.originalContent = originalContent;
 
                 // Add the Grinch image to the inner HTML
-                cardBody.innerHTML = '<img src="../../images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;">';
+                cardHeader.innerHTML = `<div id="grinch-${door.id}"><img src="../../images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;"></div>`;
 
-                // Remove the Grinch image and restore the original content after 2 seconds (2000 milliseconds)
-                setTimeout(() => {
-                    cardBody.innerHTML = originalContent;
-                }, 2000);
+                // Update the active door and set a new timeout
+                activeDoor = lockedDoor;
+                activeTimeout = setTimeout(() => {
+                    cardHeader.innerHTML = originalContent;
+                    activeDoor = null;
+                    activeTimeout = null;
+                }, 1000);
             });
         }
     });
 }
-
 notAllowedDoorsWarning(lookedDoors);
