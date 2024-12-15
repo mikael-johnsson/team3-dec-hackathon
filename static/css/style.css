@@ -146,7 +146,7 @@ footer {
 }
 
 .footer a {
-        font-weight: 600;
+        font-weight: 500;
         text-decoration: none; 
         color: inherit; 
         transition: transform 0.3s ease;
