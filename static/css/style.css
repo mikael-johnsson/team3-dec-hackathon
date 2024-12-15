@@ -44,6 +44,9 @@ header {
     border: solid 2px var(--primary-green);
     margin: 10px;
     padding: 10px;
+    border-radius: 10px;
+    background-color: white !important;
+    box-shadow: 5px 5px 5px #444444;
 }
 
 /* Right aside styles */
