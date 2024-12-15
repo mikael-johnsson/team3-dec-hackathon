@@ -154,6 +154,11 @@ footer {
     
 }
 
+footer div {
+    margin-top: 15px;
+    align-content: center;
+}
+
 .footer ul{
     list-style: none;
     column-count: 2; 
