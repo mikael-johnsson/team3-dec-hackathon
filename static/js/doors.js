@@ -3,7 +3,7 @@ const doors = [
         id: "door1",
         date: new Date('2024-12-01T00:00:00'),
         content: {
-            text:"this is a fun image for December 1st.",
+            text:"Did you know that December 1st marks the official beginning of Advent in many Christian traditions?",
             img: "images/santa_door1.jpg",
         }
     },
@@ -11,7 +11,7 @@ const doors = [
         id: "door2",
         date: new Date('2024-12-02T00:00:00'),
         content: {
-            text: "It takes about 15 years to grow the average Christmas tree. Alabama was the first state to officially recognize Christmas in 1836. Oklahoma was the last, in 1907. Santa Claus is based on a real person: St. Nikolas of Myra.",
+            text: "It takes about 15 years to grow the average Christmas tree. That’s a long time to wait for a decoration!",
             img: "images/santa_door1.jpg",
         }
     },
@@ -27,7 +27,7 @@ const doors = [
         id: "door4",
         date: new Date('2024-12-04T00:00:00'),
         content: {
-            text: "We all love to sing along to Jingle Bells, but have you ever noticed that the song doesn’t have the word Christmas in it? Or Jesus or Santa Claus? That’s because it wasn’t originally a Christmas song! In fact, the jolly anthem was written in 1850, entitled One Horse Open Sleigh, for the American holiday, Thanksgiving!",
+            text: "We all love Jingle Bells, but have you ever noticed that the song doesn’t have the word Christmas in it? That’s because it wasn’t originally a Christmas song!",
             img: "images/santa_door1.jpg",
         }
     },
@@ -35,7 +35,7 @@ const doors = [
         id: "door5",
         date: new Date('2024-12-05T00:00:00'),
         content: {
-            text: "Christmas trees also became popular in Victorian Britain. But these were first seen in 16th Century Germany where, at Christmas time, people decorated fir trees with fruit and nuts and later sweets, paper shapes and candles. Amazingly, historians think the origins of this festive tradition may date back to the Romans and Ancient Egyptians, who used evergreen plants and garlands as symbols of everlasting life. Wow!",
+            text: "The first recorded Christmas card was sent in 1843 in England by Sir Henry Cole. He commissioned a card of festive design, and it featured a family celebrating Christmas dinner.",
             img: "images/santa_door1.jpg",
         } 
     },
@@ -43,7 +43,7 @@ const doors = [
         id: "door6",
         date: new Date('2024-12-06T00:00:00'),
         content: {
-            text: "Christmaas stocking",
+            text: "In the Netherlands, the Christmas season officially starts on December 7th with the arrival of Sinterklaas, who sails into towns on a steamboat.",
             img: "images/Christmas_trees_with_Red_Christmas_sock.jpg",
         }
     },
@@ -67,7 +67,7 @@ const doors = [
         id: "door9",
         date: new Date('2024-12-09T00:00:00'),
         content: {
-            text: "The world’s tallest Christmas tree was 221ft high and was displayed in a Washington shopping mall in 1950",
+            text: "The world’s tallest Christmas tree was 221ft high and was displayed in a Washington shopping mall in 1950.",
             img: "images/santa_door1.jpg",
         }
     },
@@ -83,7 +83,7 @@ const doors = [
         id: "door11",
         date: new Date('2024-12-11T00:00:00'),
         content: {
-            text: "Colourful image of chritsmas tree decoration and lights",
+            text: "In Italy, December 16th marks the beginning of “La Novena,” a nine-day prayer tradition leading up to Christmas.",
             img: "images/Christmas_Tree_and_Presents.jpg",
         } 
     },
@@ -99,7 +99,7 @@ const doors = [
         id: "door13",
         date: new Date('2024-12-13T00:00:00'),
         content: {
-            text: "this is a fun fact about December 13th.",
+            text: "St. Lucia Day is celebrated on December 13th, especially in Sweden, Norway, and Finland. The day honors St. Lucia, who is known for bringing light during the dark winter months.",
             img: "images/Christmas_presents.jpg",
         }
     },
@@ -115,7 +115,7 @@ const doors = [
         id: "door15",
         date: new Date('2024-12-15T00:00:00'),
         content: {
-            text: "This is a fun fact about December 15th.",
+            text: "The tradition of hanging stockings comes from the story of St. Nicholas. Legend has it that he dropped gold coins down the chimney of a poor family, and the coins landed in the stockings that were hanging by the fire to dry!.",
             img: "images/santa_door1.jpg",
         } 
     },
@@ -123,7 +123,7 @@ const doors = [
         id: "door16",
         date: new Date('2024-12-16T00:00:00'),
         content: {
-            text: "I got a universal remote control for Christmas. This changes everything.",
+            text: "What do you call an elf who sings? A wrapper!",
             img: "images/santa_door1.jpg",
         }
     },
@@ -131,7 +131,7 @@ const doors = [
         id: "door17",
         date: new Date('2024-12-17T00:00:00'),
         content: {
-            text: "Gingerbread houses. The largest gingerbread house ever built was 1,110 square meters and 3.07 meters tall. It was built in Texas in 2013 as a charity fundraiser for a hospital",
+            text: "The largest gingerbread house ever built was 1,110 square meters and 3.07 meters tall. It was built in Texas in 2013 as a charity fundraiser for a hospital",
             img: "images/santa_door1.jpg",
         } 
     },
