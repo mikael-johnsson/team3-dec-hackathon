@@ -19,7 +19,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    font-family: "Crafty Girls", cursive !important;
+    font-family: "Crafty Girls", cursive, sans-serif !important;
     min-height: 100svh;
     min-height: 100vh;
 }
