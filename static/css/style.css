@@ -112,30 +112,30 @@ header {
   }
 }
 
-/* Door styling */
+/* Door styling for mobile screens and up */
 
 #row-one {
-  width: 20%;
+  width: 30%;
 }
 
 #row-two {
-  width: 35%;
+  width: 45%;
 }
 
 #row-three {
-  width: 50%;
+  width: 60%;
 }
 
 #row-four {
-  width: 65%;
+  width: 75%;
 }
 
 #row-five {
-  width: 80%;
+  width: 100%;
 }
 
 #row-six {
-  width: 95%;
+  width: 100%;
 }
 
 #trunk {
