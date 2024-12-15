@@ -1,8 +1,11 @@
 /* All styles goes here */
 
 /* background color */
-.timer-container, .right-aside, .calendar-container, #main-container {
-    background-color: antiquewhite !important;
+.timer-container,
+.right-aside,
+.calendar-container,
+#main-container {
+  background-color: antiquewhite !important;
 }
 
 /* Variables */
@@ -11,52 +14,50 @@
   --primary-green: #17a317;
 }
 
-
 body {
-    font-family: fantasy, sans-serif !important;
-    min-height: 100svh;
+  font-family: fantasy, sans-serif !important;
+  min-height: 100svh;
 }
 
 /* Header styles */
 header {
-    background-color: var(--primary-red);
-    color: white;
-    padding: 10px;
-    text-align: center;
+  background-color: var(--primary-red);
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
 
 #main-container {
-    display: flex;
+  display: flex;
 }
 
 /* Timer Styles */
 
 #timer {
-    width: 220px;
-    height: 130px;
-    border: solid 2px var(--primary-green);
-    margin: 10px;
+  width: 220px;
+  height: 130px;
+  border: solid 2px var(--primary-green);
+  margin: 10px;
 }
 
 /* Right aside styles */
 .right-aside {
-    width: 220px;
-    height: 130px;
-    margin: 10px;
+  width: 220px;
+  height: 130px;
+  margin: 10px;
 }
 
 /* Calendar styles */
 
 .calendar-container {
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 .card {
-    margin-bottom: 32px;
-    
+  margin-bottom: 32px;
 }
 
 /* .card:not(.card-shake){
@@ -71,100 +72,139 @@ header {
 } */
 
 .child {
-    color: aliceblue;
-    background-color: var(--primary-red);
-    border: solid 2px var(--primary-green);
+  color: aliceblue;
+  background-color: var(--primary-red);
+  border: solid 2px var(--primary-green);
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /* style that highlights the current day in the calendar */
 .todays-door {
-    border: solid 2px var(--primary-red) !important;
+  border: solid 2px var(--primary-red) !important;
 }
 
 /* Rule to apply the animation to the door */
 
 .card-shake {
-    animation: tilt-shaking 0.5s ease-in-out;
+  animation: tilt-shaking 0.5s ease-in-out;
 }
-
 
 /* Animation for the shaking effect */
 
 @keyframes tilt-shaking {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
   }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 /* Door styling */
 
 #row-one {
-    width: 20%;
+  width: 20%;
 }
 
 #row-two {
-    width: 35%;
+  width: 35%;
 }
 
 #row-three {
-    width: 50%;
+  width: 50%;
 }
 
-#row-four{
-    width: 65%;
+#row-four {
+  width: 65%;
 }
 
-#row-five{
-    width: 80%;
+#row-five {
+  width: 80%;
 }
 
-#row-six{
-    width: 95%;
+#row-six {
+  width: 95%;
 }
 
 #trunk {
-    width: 75%;
+  width: 75%;
 }
 
 .door-scroll {
-    max-height: 200px;
-    overflow-y: auto;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 /* Footer styles */
 footer {
-    color: white;
-    background-color: var(--primary-red);
-    position:relative;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-
-    
+  color: white;
+  background-color: var(--primary-red);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.footer ul{
-    list-style: none;
-    column-count: 2; 
-    column-gap: 20px;
-    padding: 0;
+.footer ul {
+  list-style: none;
+  column-count: 2;
+  column-gap: 20px;
+  padding: 0;
 }
 
 .footer a {
-        font-weight: 500;
-        text-decoration: none; 
-        color: inherit; 
-        transition: transform 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
 
-    &:hover {
-        transform: scale(1.5);
-        text-decoration: underline;
-    }
+  &:hover {
+    transform: scale(1.5);
+    text-decoration: underline;
+  }
+}
+
+/* Calendar door styling for larger screens */
+
+@media (min-width: 992px) {
+  #row-one {
+    width: 20%;
+  }
+
+  #row-two {
+    width: 35%;
+  }
+
+  #row-three {
+    width: 50%;
+  }
+
+  #row-four {
+    width: 65%;
+  }
+
+  #row-five {
+    width: 80%;
+  }
+
+  #row-six {
+    width: 95%;
+  }
+
+  #trunk {
+    width: 75%;
+  }
 }
