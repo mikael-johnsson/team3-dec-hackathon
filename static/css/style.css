@@ -68,9 +68,9 @@ header {
     display: none !important;
 }
 
-
+/* style that highlights the current day in the calendar */
 .todays-door {
-    background-color: var(--primary-green);
+    background-color: var(--primary-green) !important;
 }
 
 /* Rule to apply the animation to the door */
