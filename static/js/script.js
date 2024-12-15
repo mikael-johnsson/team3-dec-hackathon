@@ -135,15 +135,15 @@ function flipDoor(doorsToOpen) {
 
         // Check if the door element exists in the DOM
         if (doorElement) {
+            // Apply the "open" state for doors saved in LocalStorage
+            if (openedDoors.includes(door.id)) {
+                doorElement.classList.add('card-shake'); // Keep door open
+            }
+
             // Add click event listener to the door element
             doorElement.addEventListener("click", function () {
                 // Add the card-shake class for the click effect
-                this.classList.add('card-shake');
-
-                // Remove the card-shake class after the animation completes
-                setTimeout(() => {
-                    this.classList.remove('card-shake');
-                }, 500); // Match the duration of the animation
+                this.classList.toggle('card-shake'); // Use toggle to open/close the door
 
                 // Update the openedDoors state
                 if (this.classList.contains('card-shake')) {
@@ -163,8 +163,9 @@ function flipDoor(doorsToOpen) {
     }
 }
 
-
+// Initialize the flipDoor function
 flipDoor(doorsToOpen);
+
 
 /** 
  * @param {array} lookedDoors - an array of all closed doors
