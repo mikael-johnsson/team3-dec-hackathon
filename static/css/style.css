@@ -1,5 +1,7 @@
 /* All styles goes here */
 
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
+
 /* background color */
 .timer-container, .right-aside, .calendar-container, #main-container {
     background-color: antiquewhite !important;
@@ -15,7 +17,7 @@
 body {
     display: flex;
     flex-direction: column;
-    font-family: fantasy, sans-serif !important;
+    font-family: “Crafty Girls”, sans-serif !important;
     min-height: 100svh;
     min-height: 100vh;
 }
