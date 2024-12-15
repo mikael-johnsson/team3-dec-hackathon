@@ -68,9 +68,9 @@ header {
     display: none !important;
 }
 
-
+/* style that highlights the current day in the calendar */
 .todays-door {
-    background-color: var(--primary-green);
+    border: solid 2px var(--primary-red) !important;
 }
 
 /* Rule to apply the animation to the door */
@@ -146,7 +146,7 @@ footer {
 }
 
 .footer a {
-        font-weight: 600;
+        font-weight: 500;
         text-decoration: none; 
         color: inherit; 
         transition: transform 0.3s ease;

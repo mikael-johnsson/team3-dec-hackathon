@@ -27,22 +27,22 @@ let doorsToOpen = allowedDoors(doors);
 
 /**
  * 
- * @param{array} doors - array of all doors
+ * @param {array} doors - array of all doors
  * @return {array} notAllowedDoors - an array of all doors that aren't allowed
  *  to be opened depending of todays date
  */
 function notAllowedDoors(doors){
-    let notAllowerDoors = []
+    let notAllowedDoors = []
     let today = new Date();
     today.setHours(0, 0, 0, 0);
 
     doors.forEach(door =>{
         if (door.date > today){
-            notAllowerDoors.push(door)
+            notAllowedDoors.push(door)
         }
     });
     // Returns an array of door objects that aren't allowed to be opened
-    return notAllowerDoors
+    return notAllowedDoors
 }
 
 let lookedDoors = notAllowedDoors(doors);
@@ -78,7 +78,7 @@ function clickableDoors(doors){
     doors.forEach(door => {
         let targetDoor = document.getElementById(door.id);
         const children = targetDoor.querySelectorAll('.child');
-        targetDoor.addEventListener('click', (e) => {
+        targetDoor.addEventListener('click', () => {
             children.forEach(child => {
                 child.classList.toggle('hidden');
             });
@@ -105,6 +105,10 @@ function highlightToday(doors){
     });
 }
 
+/**
+ * 
+ * @returns {string} today - returns todays date in the format of a string
+ */
 function getTodayDate() {
     const today = new Date();
     today.setHours(0, 0, 0, 0); // Set time to 00:00:00
@@ -179,7 +183,7 @@ function notAllowedDoorsWarning(lookedDoors) {
         if (lockedDoor) {
             // Add click event listener to the locked door
             lockedDoor.addEventListener('click', function() {
-                const cardBody = lockedDoor.querySelector('.card-body');
+                const cardBody = lockedDoor.querySelector('.card-header');
                 const originalContent = cardBody.innerHTML;
 
                 // Add the Grinch image to the inner HTML
