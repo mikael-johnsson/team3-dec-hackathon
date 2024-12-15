@@ -209,9 +209,10 @@ function notAllowedDoorsWarning(lockedDoors) {
                     cardHeader.innerHTML = originalContent;
                     activeDoor = null;
                     activeTimeout = null;
-                }, 1000);
+                }, 5000);
             });
         }
     });
 }
+
 notAllowedDoorsWarning(lookedDoors);
