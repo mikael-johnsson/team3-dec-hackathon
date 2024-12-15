@@ -1,7 +1,6 @@
 /* All styles goes here */
 
 /* background color */
-.timer-container,
 .right-aside,
 .calendar-container,
 #main-container {
@@ -40,12 +39,12 @@ header {
 
 #timer {
     width: 18%;
-    height: 130px;
+    height: 36%;
     border: solid 2px var(--primary-green);
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    background-color: white !important;
+    background-color: white;
     box-shadow: 5px 5px 5px #444444;
 }
 
