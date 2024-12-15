@@ -26,11 +26,26 @@ In this section, we will briefly discuss how our team addressed the applicable c
 
 ## **🎅 About the Submission**  
 
-### **Intro**  
-One or two paragraphs providing an overview of our project.  
-This could include how our project embodies the **Hack the Holidays** spirit and what makes it unique.  
+### **Introduction**  
+This project was completed as part of the last Code Institute Hackathon of 2024 called <em>**Hack The Hoildays**</em>. As a team of six we worked together to create and develop and webpage which went with the over all Christmas Theme of the project. The idea was to create a interative Christmas Advent Calendar which is easily accessible and provides the user with a fun, festive alternative to the traditional store bought advent calendar. <br>
+<br>
+Simply put, family, friends can count down the days to Christmas at the click of a button, where each click unlocks a door which holds it's own unqiue content, whether it be a fun fact about Christmas, a festive joke, a mind bending riddle or a fun image. 
+  
 
 ---
+
+### **Design** <br>
+The use of Colour Schemes, Wireframe, Typography, and Imagery made up the design of this project. 
+#### **Colour Scheme** <br>
+- #FF3333 red , #4C9900 green , #D7D3D3 off white , #FFFF00 yellow. Colours where selected to go with the festive theme of Christmas. <br>
+#### **Wireframe** <br>
+Please click [**Here**](https://balsamiq.cloud/s5ojd4g/prk7610) to view wireframe, which aided the over all idea of what we wanted for the UI. This allowed us to look at the page structure, user flow and functionality. The wireframe opened the team up to discussions around what we wanted the user experience to be and how we could make it user friendly, but most importantly **FUN**. <br>
+
+#### **Typography** <br>
+Font style used is called <em>"Crafty Girls"</em> as a decorative font to add a playful feel to the UI. Google Fonts was used to select the perfect font style, which would match the ideas we had on how we wanted the page to look and feel.
+
+---
+
 
 ### **Goal**  
 The **Goal** section provides a concise summary of the main objective or purpose of the project described in this README. It addresses the following aspects:  
@@ -61,6 +76,6 @@ In the **Credits** section, we acknowledge the resources, tools, or inspirations
 - Mikael Johnsson <br> [GitHub](https://github.com/mikael-johnsson)
 - Mariam Ayoub <br> [GitHub](https://github.com/mariam138)
 - Kelly Thompson <br> [GitHub](https://github.com/KellyT44)
-- Luis Goncalves <br>  [GitHub](https://github.com/Luisg882)
+- Luis Goncalves <br>  [GitHub](https://github.com/Luisg882) 
 
 ---
