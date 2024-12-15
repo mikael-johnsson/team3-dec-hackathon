@@ -27,22 +27,22 @@ let doorsToOpen = allowedDoors(doors);
 
 /**
  * 
- * @param{array} doors - array of all doors
+ * @param {array} doors - array of all doors
  * @return {array} notAllowedDoors - an array of all doors that aren't allowed
  *  to be opened depending of todays date
  */
 function notAllowedDoors(doors){
-    let notAllowerDoors = []
+    let notAllowedDoors = []
     let today = new Date();
     today.setHours(0, 0, 0, 0);
 
     doors.forEach(door =>{
         if (door.date > today){
-            notAllowerDoors.push(door)
+            notAllowedDoors.push(door)
         }
     });
     // Returns an array of door objects that aren't allowed to be opened
-    return notAllowerDoors
+    return notAllowedDoors
 }
 
 let lookedDoors = notAllowedDoors(doors);
