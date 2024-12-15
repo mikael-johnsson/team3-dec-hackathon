@@ -63,12 +63,18 @@ The **Goal** section provides a concise summary of the main objective or purpose
 
 ---
 
-## **🌟 Credits**  
-In the **Credits** section, we acknowledge the resources, tools, or inspirations used in this project, such as:  
-- Any tutorials or articles referenced  
-- Any open-source libraries or frameworks  
-- Any special mentions for contributors, teammates, or mentors  
-
+## **🌟 Credits** 
+<br>
+LocalStorage in Javascript sourced from <em>LogRocket Blog</em>.
+<br>
+A resource from <em>SheCodes</em> relating to Javascript - Creating a Clock.
+<br>
+The Wireframe was created with <em>Balsamiq</em>
+<br> 
+Typography was take from <em>WikiMedia Commons</em>.
+<br>
+Content such as Riddles, Jokes and Facts where sourced from <em>WhyChristmas, National Geographic Kids.</em>
+ 
 ### Contributors
 
 - Liam Goddard <br> [GitHub](https://github.com/caleom)
