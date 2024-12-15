@@ -1,5 +1,10 @@
 /* All styles goes here */
 
+/* background color */
+.timer-container, .right-aside, .calendar-container, #main-container {
+    background-color: antiquewhite !important;
+}
+
 /* Variables */
 :root {
   --primary-red: #b62121;
@@ -30,6 +35,13 @@ header {
     width: 220px;
     height: 130px;
     border: solid 2px var(--primary-green);
+    margin: 10px;
+}
+
+/* Right aside styles */
+.right-aside {
+    width: 220px;
+    height: 130px;
     margin: 10px;
 }
 
@@ -156,8 +168,3 @@ footer {
         text-decoration: underline;
     }
 }
-
-body {
-    font-family: fantasy, sans-serif !important;
-}
-
