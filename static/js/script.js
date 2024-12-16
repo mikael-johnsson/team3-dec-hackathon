@@ -124,15 +124,7 @@ function getTodayDate() {
 highlightToday(doorsToOpen);
 addContentToDoors(doorsToOpen);
 
-/**
- * Starter function to allow the doors to  shake when clicked
- * doorsToFlip can be updated to allowedDoors. This is where we could
- * check the date and display a message to the user if they try to
- * open a door when it's not yet that date.
- * May have to create two separate css classes so that the front of the door
- * displays the number, then when the door is clicked to flip, the back displays
- * the door content listed in doors.js.
- */
+
 // Helper function to set a cookie
 function setCookie(name, value, days) {
   const date = new Date();
@@ -153,6 +145,9 @@ function getCookie(name) {
   return null;
 }
 
+/**
+ * @param {array} doorsToOpen - an array of all doors that are allowed to be opened
+ */
 function flipDoor(doorsToOpen) {
   // Retrieve saved opened doors from cookies
   let openedDoors = getCookie("openedDoors")
