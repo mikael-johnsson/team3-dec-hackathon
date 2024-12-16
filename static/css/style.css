@@ -35,15 +35,15 @@ header {
   justify-content: space-evenly;
   background-image: url(../../images/trees.png);
 
-  &::before{
-      content: ""; 
-      position: fixed; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 100%; 
-      background-color: rgba( 	23, 163, 23, 0.2); /* Blue tint, 10% opacity */ 
-      pointer-events: none; /* Ensure content is accessible */
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23, 163, 23, 0.2); /* Blue tint, 10% opacity */
+    pointer-events: none; /* Ensure content is accessible */
   }
 }
 
