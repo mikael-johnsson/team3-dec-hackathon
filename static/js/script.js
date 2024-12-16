@@ -214,18 +214,7 @@ function notAllowedDoorsWarning(lockedDoors) {
 
         //check for double clicks
 
-        originalContent = doubleClickCheck();
-
-        function doubleClickCheck() {
-          if (
-            cardHeader.innerHTML ===
-            `<div id="grinch-${door.id}"><img src="../../images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;"></div>`
-          ) {
-            return originalContent;
-          } else {
-            return cardHeader.innerHTML;
-          }
-        }
+        originalContent = doubleClickCheck(cardHeader, originalContent, door);
 
         // If another door is already active, clear its timeout and restore its content
         if (activeDoor && activeDoor !== lockedDoor) {
@@ -252,6 +241,19 @@ function notAllowedDoorsWarning(lockedDoors) {
   });
 }
 notAllowedDoorsWarning(lookedDoors);
+
+
+function doubleClickCheck(cardHeader, originalContent, door) {
+  if (
+    cardHeader.innerHTML ===
+    `<div id="grinch-${door.id}"><img src="../../images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;"></div>`
+  ) {
+    return originalContent;
+  } else {
+    return cardHeader.innerHTML;
+  }
+}
+
 
 function openOnLoad(element) {
   let elementId = document.getElementById(element);
