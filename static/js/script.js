@@ -213,7 +213,6 @@ function notAllowedDoorsWarning(lockedDoors) {
         const cardHeader = lockedDoor.querySelector(".front");
 
         //check for double clicks
-
         originalContent = doubleClickCheck(cardHeader, originalContent, door);
 
         // If another door is already active, clear its timeout and restore its content
@@ -240,6 +239,8 @@ function notAllowedDoorsWarning(lockedDoors) {
     }
   });
 }
+
+
 notAllowedDoorsWarning(lookedDoors);
 
 
