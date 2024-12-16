@@ -146,7 +146,8 @@ function getCookie(name) {
 }
 
 /**
- * @param {array} doorsToOpen - an array of all doors that are allowed to be opened
+ * @param {array} doorsToOpen - an array of all doors that are allowed
+ * to be opened
  */
 function flipDoor(doorsToOpen) {
   // Retrieve saved opened doors from cookies
@@ -215,11 +216,13 @@ function notAllowedDoorsWarning(lockedDoors) {
         //check for double clicks
         originalContent = doubleClickCheck(cardHeader, originalContent, door);
 
-        // If another door is already active, clear its timeout and restore its content
+        // If another door is already active, clear its timeout
+        // and restore its content
         if (activeDoor && activeDoor !== lockedDoor) {
           const prevCardHeader = activeDoor.querySelector(".card-header");
           clearTimeout(activeTimeout);
-          prevCardHeader.innerHTML = prevCardHeader.dataset.originalContent; // Restore previous content
+          // Restore previous content
+          prevCardHeader.innerHTML = prevCardHeader.dataset.originalContent; 
         }
 
         // Save original content to a dataset for safe restoration
