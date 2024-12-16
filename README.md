@@ -5,10 +5,7 @@
 
 ### **Deployment**  
 
-<!-- Add deployment steps here -->
-
-The project is deployed and can be accessed at:  
-**https://mikael-johnsson.github.io/team3-dec-hackathon/**  
+The project was deployed on GitHub. The live site can be accessed at: **https://mikael-johnsson.github.io/team3-dec-hackathon/**  
 
 ---
 
@@ -18,9 +15,12 @@ In this section, we will briefly discuss how our team addressed the applicable c
     - This project is based on the popular advent calendars which appear around Christmas time, usually filled with chocolate! (Unfortunately there is no chocolate in this one)
 - 🎁 **The project is well planned and executed (Using GitHub Projects/Kanban).**  
     - Issues were created for tasks that needed to be done and assigned to contributors. The project board can be found [here](https://github.com/users/mikael-johnsson/projects/9/views/1)
-- 🎁 **The project has a basic README that follows the provided template.**  
+- 🎁 **The project has a basic README that follows the provided template.** 
+    - This can be seen throughout this README
 - 🎁 **The project has an overall sense of completeness.**  
+    - The advent calendar is fully interactive, with doors from the current date and previous being able to be opened. Anyone trying to open any doors in the future will get a surprise message!
 - 🎁 **The project showcases a strong sense of creativity and originality.**  
+    - This project is a technical take on traditional Christmas advent calendars. Usually filled with chocolate, this one is filled with fun facts and jokes to bring holiday spirit to everyone.
 
 ---
 
