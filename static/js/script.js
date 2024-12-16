@@ -228,7 +228,7 @@ function notAllowedDoorsWarning(lockedDoors) {
         cardHeader.dataset.originalContent = originalContent;
 
         // Add the Grinch image to the inner HTML
-        cardHeader.innerHTML = `<div id="grinch-${door.id}"><img src="../../images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;"></div>`;
+        cardHeader.innerHTML = `<div id="grinch-${door.id}"><img src="images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;"></div>`;
 
         // Update the active door and set a new timeout
         activeDoor = lockedDoor;
@@ -249,7 +249,7 @@ notAllowedDoorsWarning(lookedDoors);
 function doubleClickCheck(cardHeader, originalContent, door) {
   if (
     cardHeader.innerHTML ===
-    `<div id="grinch-${door.id}"><img src="../../images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;"></div>`
+    `<div id="grinch-${door.id}"><img src="images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;"></div>`
   ) {
     return originalContent;
   } else {
