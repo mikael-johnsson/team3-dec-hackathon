@@ -128,9 +128,31 @@ addContentToDoors(doorsToOpen);
  * displays the number, then when the door is clicked to flip, the back displays
  * the door content listed in doors.js.
  */
+// Helper function to set a cookie
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = `${name}=${value}; ${expires}; path=/`;
+}
+
+// Helper function to get a cookie
+function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let c = cookies[i].trim();
+        if (c.indexOf(name + "=") === 0) {
+            return c.substring((name + "=").length, c.length);
+        }
+    }
+    return null;
+}
+
 function flipDoor(doorsToOpen) {
-    // Retrieve saved opened doors from LocalStorage or initialize an empty array
-    let openedDoors = JSON.parse(localStorage.getItem('openedDoors')) || [];
+    // Retrieve saved opened doors from cookies
+    let openedDoors = getCookie('openedDoors') 
+        ? getCookie('openedDoors').split(',') 
+        : [];
 
     // Iterate over the doorsToOpen array
     for (let i = 0; i < doorsToOpen.length; i++) {
@@ -139,32 +161,29 @@ function flipDoor(doorsToOpen) {
 
         // Check if the door element exists in the DOM
         if (doorElement) {
-            // Apply the "open" state for doors saved in LocalStorage
-            // BUG: this is causing some of the doors to shake when the page is first opened
-            // removing the 'card-shake' class stops that from happening but doesnt show an
-            // 'open' door, so this needs fixing
+            // Apply the "open" state for doors saved in cookies
             if (openedDoors.includes(door.id)) {
                 doorElement.classList.add('card-shake'); // Keep door open
             }
 
             // Add click event listener to the door element
             doorElement.addEventListener("click", function () {
-                // Add the card-shake class for the click effect
-                this.classList.toggle('card-shake'); // Use toggle to open/close the door
+                // Toggle the card-shake class
+                this.classList.toggle('card-shake');
 
-                // Update the openedDoors state
+                // Update the openedDoors array
                 if (this.classList.contains('card-shake')) {
-                    // Add to opened doors if not already included
+                    // Add the door ID if not already included
                     if (!openedDoors.includes(this.id)) {
                         openedDoors.push(this.id);
                     }
                 } else {
-                    // Remove from opened doors if it exists
+                    // Remove the door ID if it exists
                     openedDoors = openedDoors.filter(id => id !== this.id);
                 }
 
-                // Save the updated state to LocalStorage
-                localStorage.setItem('openedDoors', JSON.stringify(openedDoors));
+                // Save the updated opened doors state in cookies
+                setCookie('openedDoors', openedDoors.join(','), 7); // Save for 7 days
             });
         }
     }
