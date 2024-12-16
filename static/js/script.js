@@ -179,8 +179,7 @@ function flipDoor(doorsToOpen) {
             openedDoors.push(this.id);
           }
         } else {
-          // Remove the door ID if it exists
-          // openedDoors = openedDoors.filter(id => id !== this.id);
+          openedDoors = openedDoors.filter(id => id !== this.id);
         }
 
         // Save the updated opened doors state in cookies
@@ -213,7 +212,7 @@ function notAllowedDoorsWarning(lockedDoors) {
       lockedDoor.addEventListener("click", function () {
         const cardHeader = lockedDoor.querySelector(".front");
 
-        //check for double clicks
+        // check for double clicks
         originalContent = doubleClickCheck(cardHeader, originalContent, door);
 
         // If another door is already active, clear its timeout

@@ -64,18 +64,13 @@ The **Goal** section provides a concise summary of the main objective or purpose
 ---
 
 ## **🌟 Credits** 
-<br>
-LocalStorage in Javascript sourced from <em>LogRocket Blog</em>.
-<br>
-A resource from <em>SheCodes</em> relating to Javascript - Creating a Clock.
-<br>
-The Wireframe was created with <em>Balsamiq</em>
-<br> 
-Typography was take from <em>WikiMedia Commons</em>.
-<br>
-Content such as Riddles, Jokes and Facts where sourced from <em>WhyChristmas, National Geographic Kids.</em>
-<br>
-Craiyon - for images
+
+- A resource from <em>SheCodes</em> relating to Javascript - [Creating a Clock](https://www.shecodes.io/athena/2587-creating-a-clock-in-javascript).
+- The Wireframe was created with <em>Balsamiq</em>
+- Typography was take from <em>WikiMedia Commons</em>.
+- Content such as Riddles, Jokes and Facts where sourced from <em>WhyChristmas, National Geographic Kids.</em>
+- Craiyon - for images
+- [favicon.io](https://favicon.io/emoji-favicons/christmas-tree/) for the website's favicon
  
 ### Contributors
 
