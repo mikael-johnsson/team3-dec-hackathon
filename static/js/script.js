@@ -249,7 +249,7 @@ notAllowedDoorsWarning(lookedDoors);
 function doubleClickCheck(cardHeader, originalContent, door) {
   if (
     cardHeader.innerHTML ===
-    `<div id="grinch-${door.id}"><img src="images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;"></div>`
+    `<div id="grinch-${door.id}"><img src="../../images/grinch.png" alt="Grinch" style="max-width: 100%; max-height: 100%;"></div>`
   ) {
     return originalContent;
   } else {
