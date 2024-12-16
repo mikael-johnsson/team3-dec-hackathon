@@ -6,7 +6,8 @@
 .right-aside,
 .calendar-container,
 #main-container {
-  background-color: antiquewhite !important;
+  background-color: var(--primary-green) !important;
+  color: antiquewhite;
 }
 
 /* Variables */
