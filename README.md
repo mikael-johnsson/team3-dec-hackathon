@@ -74,6 +74,8 @@ The Wireframe was created with <em>Balsamiq</em>
 Typography was take from <em>WikiMedia Commons</em>.
 <br>
 Content such as Riddles, Jokes and Facts where sourced from <em>WhyChristmas, National Geographic Kids.</em>
+<br>
+Craiyon - for images
  
 ### Contributors
 

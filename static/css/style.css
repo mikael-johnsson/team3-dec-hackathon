@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
 
 /* background color */
-.right-aside,
-.calendar-container,
 #main-container {
   background-color: var(--primary-green) !important;
   color: antiquewhite;
@@ -29,7 +27,6 @@ body {
 header {
   background-color: var(--primary-red);
   color: white;
-  padding: 10px;
   text-align: center;
 }
 
@@ -37,19 +34,29 @@ header {
   flex: 1;
   display: flex;
   justify-content: space-evenly;
+  background-image: url(../../images/trees.png);
+
+  &::before{
+      content: ""; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background-color: rgba( 	23, 163, 23, 0.2); /* Blue tint with 10% opacity */ 
+      pointer-events: none; /* Ensure content is accessible */
+  }
 }
 
 /* Timer Styles */
 
 #timer {
-  width: 18%;
-  height: 36%;
-  border: solid 2px var(--primary-green);
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   background-color: white;
   box-shadow: 5px 5px 5px #444444;
+  color: var(--primary-red);
 }
 
 /* Right aside styles */
@@ -69,24 +76,20 @@ header {
 
 .card {
   margin-bottom: 32px;
+  aspect-ratio: 1/1;
+  
 }
 
 .card-header,
 .card-body {
-  background-color: rgb(22, 109, 34) !important;
+  background-color: var(--primary-green) !important;
   color: white !important;
 }
 
-/* .card:not(.card-shake){
-    background-image: url("../../images/christmas-colour.webp");
-} */
-
-/* .card:not(.card-shake) > .card-img-top,
-.card:not(.card-shake) > .card-header,
-.card:not(.card-shake) > .card-body
-{
-    visibility: hidden;
-} */
+.card-img-top{
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
 
 .child {
   color: aliceblue;
@@ -164,6 +167,25 @@ header {
   overflow-y: auto;
 }
 
+.front{
+  background-image: url(../../images/christmas-colour.webp);
+}
+
+.front > div {
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.05);
+box-sizing: content-box;
+border-radius: 0.5rem;
+backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(3px);
+height: 100%;
+width: 100%;
+
+align-content: center;
+font-size: x-large;
+font-weight: 600;
+}
+
 /* Footer styles */
 footer {
   color: white;
@@ -219,7 +241,7 @@ footer div {
   }
 
   #row-five {
-    width: 80%;
+    width: 100%;
   }
 
   #row-six {

@@ -7,7 +7,7 @@ function updateTime() {
     const seconds = now.getSeconds();
 
     // Format the string with leading zeroes
-    const clockStr = `Current time ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    const clockStr = `Current time ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
 
     timeElement.innerText = clockStr;
 }
@@ -24,7 +24,7 @@ function remainingTimeForNextDoor() {
    const secondsLeft = (now.getSeconds() - 60) * -1;
 
    // Format the string with leading zeroes
-   const clockStr = `Time left to next door: ${hoursLeft.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')}`;
+   const clockStr = `Time left to next door: ${hoursLeft.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}`;
    timeToNextDoor.innerText = clockStr;
 }
 
@@ -42,7 +42,7 @@ function timeLeftToChristmas() {
     const secondsLeftToChristmas = (now.getSeconds() - 60) * -1;
 
     // Format the string with leading zeroes
-   const clockStr = `Time until Christmas: ${daysLeftToChristmas.toString().padStart(2, '0')} days ${hoursLeftToChristmas.toString().padStart(2, '0')}:${minutesLeftToChristmas.toString().padStart(2, '0')}:${secondsLeftToChristmas.toString().padStart(2, '0')}`;
+   const clockStr = `Time until Christmas: ${daysLeftToChristmas.toString().padStart(2, '0')} days ${hoursLeftToChristmas.toString().padStart(2, '0')}:${minutesLeftToChristmas.toString().padStart(2, '0')}`;
    timeToChristmas.innerText = clockStr;
 }
 
