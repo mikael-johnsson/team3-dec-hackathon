@@ -24,7 +24,7 @@ function remainingTimeForNextDoor() {
    const secondsLeft = (now.getSeconds() - 60) * -1;
 
    // Format the string with leading zeroes
-   const clockStr = `Time left to next door: ${hoursLeft.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}`;
+   const clockStr = `Time left to next door: ${hoursLeft.toString().padStart(2, '0')}h ${minutesLeft.toString().padStart(2, '0')}min`;
    timeToNextDoor.innerText = clockStr;
 }
 
@@ -42,7 +42,7 @@ function timeLeftToChristmas() {
     const secondsLeftToChristmas = (now.getSeconds() - 60) * -1;
 
     // Format the string with leading zeroes
-   const clockStr = `Time until Christmas: ${daysLeftToChristmas.toString().padStart(2, '0')} days ${hoursLeftToChristmas.toString().padStart(2, '0')}:${minutesLeftToChristmas.toString().padStart(2, '0')}`;
+   const clockStr = `Time until Christmas: ${daysLeftToChristmas.toString().padStart(2, '0')} days ${hoursLeftToChristmas.toString().padStart(2, '0')}h ${minutesLeftToChristmas.toString().padStart(2, '0')}min`;
    timeToChristmas.innerText = clockStr;
 }
 
